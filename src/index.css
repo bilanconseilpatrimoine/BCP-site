@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Premium Wealth Management Design System
+All colors MUST be HSL for optimal theming
+Gold dominant, navy blue secondary, elegant beige accents
+*/
+
+@layer base {
+  :root {
+    /* Core Palette - Premium Wealth Management */
+    --background: 0 0% 100%;
+    --foreground: 210 15% 15%;
+    
+    /* Premium Gold Palette */
+    --gold: 45 90% 60%;
+    --gold-light: 48 95% 70%;
+    --gold-dark: 42 85% 50%;
+    --gold-muted: 45 50% 85%;
+    
+    /* Navy Blue Palette */
+    --navy: 210 55% 20%;
+    --navy-light: 210 45% 35%;
+    --navy-dark: 210 65% 12%;
+    
+    /* Beige Elegant Palette */
+    --beige: 45 25% 88%;
+    --beige-light: 45 30% 92%;
+    --beige-dark: 45 20% 82%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 15% 15%;
+
+    --primary: 45 90% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 45 25% 88%;
+    --secondary-foreground: 210 55% 20%;
+
+    --muted: 45 30% 92%;
+    --muted-foreground: 210 25% 45%;
+
+    --accent: 210 55% 20%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 45 20% 85%;
+    --input: 45 20% 90%;
+    --ring: 45 90% 60%;
+
+    --radius: 0.75rem;
+    
+    /* Premium Gradients */
+    --gradient-gold: linear-gradient(135deg, hsl(45 90% 60%), hsl(42 85% 50%));
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 100%), hsl(45 30% 96%));
+    --gradient-navy: linear-gradient(135deg, hsl(210 55% 20%), hsl(210 65% 12%));
+    
+    /* Elegant Shadows */
+    --shadow-premium: 0 20px 40px -12px hsl(45 90% 60% / 0.15);
+    --shadow-gold: 0 8px 32px hsl(45 90% 60% / 0.2);
+    --shadow-subtle: 0 4px 20px hsl(210 15% 15% / 0.08);
+    
+    /* Typography Scale */
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+    
+    /* Premium Spacing */
+    --spacing-luxury: 4rem;
+    --spacing-section: 6rem;
+    
+    /* Smooth Premium Animations */
+    --transition-premium: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Keep light theme for luxury wealth management */
+    --background: 0 0% 100%;
+    --foreground: 210 15% 15%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-6 sm:px-8 lg:px-12 xl:px-16;
+  }
+  
+  .container-luxury {
+    @apply max-w-7xl mx-auto section-padding;
+  }
+  
+  .text-gradient-gold {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .btn-premium {
+    @apply inline-flex items-center justify-center rounded-lg px-8 py-4 text-sm font-medium transition-all duration-300 shadow-lg hover:shadow-xl;
+    transition: var(--transition-premium);
+  }
+}
