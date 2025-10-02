@@ -5,6 +5,7 @@ import ErrorReporter from "@/components/ErrorReporter";
 import Script from "next/script";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: "Patrimoine & Conseils",
@@ -37,6 +38,7 @@ export default function RootLayout({
         {children}
         <Footer />
         {process.env.NODE_ENV === 'development' && <VisualEditsMessenger />}
+        <SpeedInsights />
       </body>
     </html>
   );
