@@ -1,4 +1,7 @@
 import type { NextConfig } from "next";
+import path from "node:path";
+
+const LOADER = path.resolve(__dirname, 'src/visual-edits/component-tagger-loader.js');
 
 const nextConfig: NextConfig = {
   images: {
@@ -13,10 +16,14 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  // Configuration robuste pour tous les déploiements
-  compress: true,
-  poweredByHeader: false,
-  generateEtags: false,
+  // outputFileTracingRoot: path.resolve(__dirname, '../../'), // Commenté pour Vercel
+  turbopack: {
+    rules: {
+      "*.{jsx,tsx}": {
+        loaders: [LOADER]
+      }
+    }
+  }
 };
 
 export default nextConfig;
