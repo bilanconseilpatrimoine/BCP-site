@@ -23,7 +23,7 @@ export default function Home() {
             Un accompagnement humain et indépendant pour révéler le potentiel de votre patrimoine: stratégie globale, investissements, fiscalité et transmission.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <Button className="gold-gradient text-black font-semibold shadow-none" asChild>
+            <Button className="gold-gradient shimmer-gold text-black font-semibold shadow-none hover:scale-105 hover:shadow-lg hover:shadow-[#D4AF37]/25 active:scale-95 transition-all duration-200" asChild>
               <Link href="/contact">Prendre rendez-vous</Link>
             </Button>
             {/* <Button variant="outline" className="border-white/30 text-white hover:bg-white/10" asChild>
@@ -74,7 +74,7 @@ export default function Home() {
               <h2 className="text-2xl md:text-3xl font-semibold" style={{ fontFamily: "var(--font-heading)" }}>Un premier échange confidentiel et sans engagement</h2>
               <p className="mt-3 text-muted-foreground">Faisons connaissance et esquissons les premiers axes d'optimisation: bilan patrimonial, objectifs de vie, horizon d'investissement et tolérance au risque.</p>
             </div>
-            <Button className="mt-6 md:mt-0 gold-gradient text-black font-semibold shadow-none" asChild>
+            <Button className="mt-6 md:mt-0 gold-gradient shimmer-gold text-black font-semibold shadow-none hover:scale-105 hover:shadow-lg hover:shadow-[#D4AF37]/25 active:scale-95 transition-all duration-200" asChild>
               <Link href="/contact">Je prends rendez-vous</Link>
             </Button>
           </div>

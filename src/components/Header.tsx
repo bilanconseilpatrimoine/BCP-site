@@ -51,7 +51,7 @@ export const Header = () => {
           })}
           <Link
             href="/contact"
-            className="inline-flex items-center rounded-md px-4 py-2 text-sm font-semibold text-black shadow-none gold-gradient hover:opacity-95 transition min-h-12"
+            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md px-4 py-2 text-sm font-semibold text-black shadow-none gold-gradient shimmer-gold hover:scale-105 hover:shadow-lg hover:shadow-[#D4AF37]/25 active:scale-95 transition-all duration-200 min-h-12 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]"
           >
             Prendre rendez-vous
           </Link>
@@ -105,7 +105,7 @@ export const Header = () => {
             })}
             <Link
               href="/contact"
-              className="inline-flex items-center rounded-md px-2 py-1 text-xs font-semibold text-black shadow-none gold-gradient hover:opacity-95 transition min-h-8"
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md px-2 py-1 text-xs font-semibold text-black shadow-none gold-gradient shimmer-gold hover:scale-105 hover:shadow-lg hover:shadow-[#D4AF37]/25 active:scale-95 transition-all duration-200 min-h-8 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]"
             >
               RDV
             </Link>
@@ -160,7 +160,7 @@ export const Header = () => {
                   <Link
                     href="/contact"
                     onClick={() => setOpen(false)}
-                    className="mt-2 inline-flex items-center rounded-md px-4 py-2 text-sm font-semibold text-black gold-gradient"
+                    className="mt-2 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md px-4 py-2 text-sm font-semibold text-black shadow-none gold-gradient shimmer-gold hover:scale-105 hover:shadow-lg hover:shadow-[#D4AF37]/25 active:scale-95 transition-all duration-200 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]"
                   >
                     Prendre rendez-vous
                   </Link>
