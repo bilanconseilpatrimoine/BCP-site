@@ -1,0 +1,182 @@
+/* Updated: 2025-09-29T07:48:54.461Z */
+/* Updated: 2025-09-28 premium theme */
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-body);
+  --font-mono: var(--font-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  /* Premium palette */
+  --gold: #D4AF37;
+  --royal: #1A2B6D;
+  --ink: oklch(0.18 0 0);
+  --paper: oklch(0.99 0 0);
+
+  /* Typography tokens */
+  --font-body: "Montserrat", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  --font-heading: "Cinzel", ui-serif, Georgia, Cambria, Times, "Times New Roman", serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  /* Base surfaces */
+  --radius: 0.75rem;
+  --background: var(--paper);
+  --foreground: var(--ink);
+  --card: var(--paper);
+  --card-foreground: var(--ink);
+  --popover: var(--paper);
+  --popover-foreground: var(--ink);
+  --primary: var(--royal);
+  --primary-foreground: var(--paper);
+  --secondary: color-mix(in oklab, var(--royal) 6%, white 94%);
+  --secondary-foreground: var(--royal);
+  --muted: color-mix(in oklab, var(--royal) 4%, white 96%);
+  --muted-foreground: oklch(0.42 0 0);
+  --accent: var(--gold);
+  --accent-foreground: oklch(0.16 0 0);
+  --destructive: oklch(0.6 0.25 25);
+  --border: color-mix(in oklab, var(--royal) 12%, white 88%);
+  --input: color-mix(in oklab, var(--royal) 10%, white 90%);
+  --ring: color-mix(in oklab, var(--gold) 55%, white 45%);
+
+  /* Charts (subtle, non-intrusive) */
+  --chart-1: color-mix(in oklab, var(--royal) 70%, white 30%);
+  --chart-2: color-mix(in oklab, var(--gold) 70%, black 30%);
+  --chart-3: color-mix(in oklab, var(--royal) 50%, var(--gold) 50%);
+  --chart-4: color-mix(in oklab, var(--royal) 35%, white 65%);
+  --chart-5: color-mix(in oklab, var(--gold) 45%, white 55%);
+
+  /* Sidebar */
+  --sidebar: color-mix(in oklab, var(--royal) 6%, white 94%);
+  --sidebar-foreground: var(--ink);
+  --sidebar-primary: var(--royal);
+  --sidebar-primary-foreground: var(--paper);
+  --sidebar-accent: color-mix(in oklab, var(--gold) 14%, white 86%);
+  --sidebar-accent-foreground: var(--royal);
+  --sidebar-border: color-mix(in oklab, var(--royal) 12%, white 88%);
+  --sidebar-ring: var(--ring);
+}
+
+.dark {
+  --background: color-mix(in oklab, black 86%, var(--royal) 14%);
+  --foreground: oklch(0.98 0 0);
+  --card: color-mix(in oklab, black 82%, var(--royal) 18%);
+  --card-foreground: oklch(0.98 0 0);
+  --popover: color-mix(in oklab, black 82%, var(--royal) 18%);
+  --popover-foreground: oklch(0.98 0 0);
+  --primary: color-mix(in oklab, var(--royal) 85%, white 15%);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: color-mix(in oklab, var(--royal) 22%, white 78%);
+  --secondary-foreground: oklch(0.99 0 0);
+  --muted: color-mix(in oklab, var(--royal) 18%, white 82% / 8%);
+  --muted-foreground: oklch(0.75 0 0);
+  --accent: color-mix(in oklab, var(--gold) 80%, black 20%);
+  --accent-foreground: oklch(0.16 0 0);
+  --destructive: oklch(0.75 0.2 25);
+  --border: color-mix(in oklab, white 10%, var(--royal) 90%);
+  --input: color-mix(in oklab, white 14%, var(--royal) 86%);
+  --ring: color-mix(in oklab, var(--gold) 60%, white 40%);
+  --chart-1: color-mix(in oklab, var(--royal) 65%, white 35%);
+  --chart-2: color-mix(in oklab, var(--gold) 70%, black 30%);
+  --chart-3: color-mix(in oklab, var(--royal) 45%, var(--gold) 55%);
+  --chart-4: color-mix(in oklab, var(--royal) 30%, white 70%);
+  --chart-5: color-mix(in oklab, var(--gold) 50%, white 50%);
+  --sidebar: color-mix(in oklab, black 82%, var(--royal) 18%);
+  --sidebar-foreground: oklch(0.98 0 0);
+  --sidebar-primary: color-mix(in oklab, var(--royal) 85%, white 15%);
+  --sidebar-primary-foreground: oklch(0.99 0 0);
+  --sidebar-accent: color-mix(in oklab, var(--gold) 30%, black 70%);
+  --sidebar-accent-foreground: oklch(0.99 0 0);
+  --sidebar-border: color-mix(in oklab, white 10%, var(--royal) 90%);
+  --sidebar-ring: var(--ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html, body {
+    height: 100%;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body);
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    letter-spacing: 0.02em;
+  }
+  /* Liquid glass effect helpers */
+  .glass-card {
+    background: color-mix(in oklab, var(--paper) 70%, transparent);
+    border: 1px solid color-mix(in oklab, var(--gold) 35%, transparent);
+    box-shadow: 0 8px 30px color-mix(in oklab, var(--royal) 15%, transparent);
+    backdrop-filter: blur(10px) saturate(120%);
+    -webkit-backdrop-filter: blur(10px) saturate(120%);
+  }
+  .gold-gradient {
+    background-image: linear-gradient(135deg, color-mix(in oklab, var(--gold) 85%, white 15%), color-mix(in oklab, var(--gold) 65%, black 35%));
+  }
+  .royal-gradient {
+    background-image: linear-gradient(135deg, color-mix(in oklab, var(--royal) 92%, black 8%), color-mix(in oklab, var(--royal) 70%, white 30%));
+  }
+
+  /* Subtle gold shimmer for CTA */
+  @keyframes shimmerGold {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+  .shimmer-gold {
+    background-image: linear-gradient(120deg,
+      color-mix(in oklab, var(--gold) 75%, black 25%) 0%,
+      color-mix(in oklab, var(--gold) 90%, white 10%) 20%,
+      color-mix(in oklab, var(--gold) 75%, black 25%) 40%);
+    background-size: 200% 100%;
+    animation: shimmerGold 2.2s linear infinite;
+  }
+}
+
+/* Hide Next.js error overlay portal */
+nextjs-portal {
+  display: none !important;
+}
