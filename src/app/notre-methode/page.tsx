@@ -1,17 +1,23 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CheckCircle2, Compass, Target, ChartLine, ShieldHalf, Handshake } from "lucide-react";
 
 export default function Page() {
   const steps = [
-    { icon: Compass, title: "Découverte & Bilan", desc: "Comprendre votre situation personnelle, professionnelle et patrimoniale." },
-    { icon: Target, title: "Objectifs & Priorités", desc: "Définir des objectifs clairs: rentabilité, transmission, protection, optimisation fiscale." },
+    { icon: Compass, title: "Découverte & Bilan", desc: "Comprendre et analyser votre situation personnelle, professionnelle, patrimoniale et fiscale." },
+    { icon: Target, title: "Objectifs & Priorités", desc: "Définir des objectifs clairs par: enrichissement, protection familiale, optimisation fiscale et successorale." },
     { icon: ChartLine, title: "Stratégie sur-mesure", desc: "Construire une architecture patrimoniale adaptée à votre horizon et votre profil de risque." },
-    { icon: ShieldHalf, title: "Mise en œuvre sécurisée", desc: "Sélectionner des solutions robustes et négocier des conditions avantageuses." },
-    { icon: Handshake, title: "Suivi & Ajustements", desc: "Mesurer les performances et ajuster en continu face aux évolutions de vie et de marché." },
+    { icon: ShieldHalf, title: "Mise en œuvre sécurisée", desc: "sélection des solutions hauts de gamme avec des conditions d'accès préférentielles." },
+    { icon: Handshake, title: "Suivi & arbitrages", desc: "Mesurer les performances et ajuster en continu face aux évolutions de vie et de marché." },
   ];
+
+  const initialVariants = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0 },
+  };
 
   return (
     <main>
@@ -30,35 +36,68 @@ export default function Page() {
           }}
         />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 text-white">
-          <h1 className="text-4xl md:text-5xl font-semibold" style={{ fontFamily: "var(--font-heading)" }}>Notre méthode</h1>
-          <p className="mt-4 max-w-2xl text-white/90">
+          <motion.h1 
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: "-10%" }}
+            variants={initialVariants}
+            transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+            className="text-4xl md:text-5xl font-semibold" 
+            style={{ fontFamily: "var(--font-heading)" }}
+          >
+            Notre méthode
+          </motion.h1>
+          <motion.p 
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: "-10%" }}
+            variants={initialVariants}
+            transition={{ duration: 0.6, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+            className="mt-4 max-w-2xl text-white/90"
+          >
             Une démarche structurée, transparente et centrée sur vos objectifs, pour une stratégie patrimoniale pérenne.
-          </p>
+          </motion.p>
         </div>
       </section>
 
       {/* Steps */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid gap-6 md:grid-cols-3">
-          {steps.map((s) => (
-            <Card key={s.title} className="glass-card">
-              <CardContent className="p-6">
-                <div className="flex items-start gap-4">
-                  <s.icon className="h-7 w-7" style={{ color: "var(--accent)" }} />
-                  <div>
-                    <h3 className="text-lg font-semibold" style={{ fontFamily: "var(--font-heading)" }}>{s.title}</h3>
-                    <p className="mt-2 text-sm text-muted-foreground">{s.desc}</p>
+          {steps.map((s, index) => (
+            <motion.div
+              key={s.title}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={initialVariants}
+              transition={{ duration: 0.6, delay: index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+            >
+              <Card className="glass-card">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <s.icon className="h-7 w-7" style={{ color: "var(--accent)" }} />
+                    <div>
+                      <h3 className="text-lg font-semibold" style={{ fontFamily: "var(--font-heading)" }}>{s.title}</h3>
+                      <p className="mt-2 text-sm text-muted-foreground">{s.desc}</p>
+                    </div>
                   </div>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </motion.div>
           ))}
         </div>
       </section>
 
       {/* Details */}
       <section className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pb-20">
-        <div className="rounded-2xl border glass-card p-6 md:p-8">
+        <motion.div 
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={initialVariants}
+          transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+          className="rounded-2xl border glass-card p-6 md:p-8"
+        >
           <h2 className="text-2xl font-semibold" style={{ fontFamily: "var(--font-heading)" }}>Ce qui fait la différence</h2>
           <Accordion type="single" collapsible className="mt-4">
             <AccordionItem value="independance">
@@ -82,9 +121,9 @@ export default function Page() {
           </Accordion>
           <div className="mt-6 flex items-center gap-3 text-sm text-muted-foreground">
             <CheckCircle2 className="h-5 w-5" style={{ color: "var(--accent)" }} />
-            Démarche documentée et conforme (CIF, ORIAS, MIA, DDA).
+            Démarche documentée et conforme (ORIAS, DDA).
           </div>
-        </div>
+        </motion.div>
       </section>
     </main>
   );

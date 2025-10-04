@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
-  title: "Patrimoine & Conseils",
+  title: "Bilan Conseil Patrimoine",
   description: "Cabinet de courtage en gestion de patrimoine",
 };
 

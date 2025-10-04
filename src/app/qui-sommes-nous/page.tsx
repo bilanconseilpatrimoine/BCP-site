@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -22,6 +23,11 @@ const team = [
 ];
 
 export default function Page() {
+  const initialVariants = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0 },
+  };
+
   return (
     <main>
       <section className="relative overflow-hidden">
@@ -38,10 +44,27 @@ export default function Page() {
           }}
         />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 text-white">
-          <h1 className="text-4xl md:text-5xl font-semibold" style={{ fontFamily: "var(--font-heading)" }}>Qui sommes-nous</h1>
-          <p className="mt-4 max-w-2xl text-white/90">
+          <motion.h1 
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: "-10%" }}
+            variants={initialVariants}
+            transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+            className="text-4xl md:text-5xl font-semibold" 
+            style={{ fontFamily: "var(--font-heading)" }}
+          >
+            Qui sommes-nous
+          </motion.h1>
+          <motion.p 
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: "-10%" }}
+            variants={initialVariants}
+            transition={{ duration: 0.6, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+            className="mt-4 max-w-2xl text-white/90"
+          >
             Un cabinet indépendant, fondé sur l'exigence, la proximité et l'éthique. Notre mission: créer de la valeur durable pour nos clients.
-          </p>
+          </motion.p>
         </div>
       </section>
 
@@ -55,13 +78,22 @@ export default function Page() {
             </p>
           </div>
           <div className="md:w-1/2 grid gap-6 sm:grid-cols-2 mt-8 md:mt-0">
-            {["Indépendance", "Exigence", "Transparence", "Proximité"].map((v) => (
-              <Card key={v} className="glass-card">
-                <CardContent className="p-5">
-                  <h3 className="font-semibold" style={{ fontFamily: "var(--font-heading)", color: "var(--accent)" }}>{v}</h3>
-                  <p className="mt-2 text-sm text-muted-foreground">Des choix éclairés et alignés sur vos intérêts de long terme.</p>
-                </CardContent>
-              </Card>
+            {["Indépendance", "Exigence", "Transparence", "Proximité"].map((v, index) => (
+              <motion.div
+                key={v}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, amount: 0.3 }}
+                variants={initialVariants}
+                transition={{ duration: 0.6, delay: index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+              >
+                <Card className="glass-card">
+                  <CardContent className="p-5">
+                    <h3 className="font-semibold" style={{ fontFamily: "var(--font-heading)", color: "var(--accent)" }}>{v}</h3>
+                    <p className="mt-2 text-sm text-muted-foreground">Des choix éclairés et alignés sur vos intérêts de long terme.</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -70,16 +102,25 @@ export default function Page() {
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-20">
         <h2 className="text-2xl font-semibold" style={{ fontFamily: "var(--font-heading)" }}>L'équipe</h2>
         <div className="mt-6 grid gap-8 sm:grid-cols-2 md:grid-cols-3">
-          {team.map((m) => (
-            <Card key={m.name} className="overflow-hidden glass-card">
-              <div className="h-56 w-full">
-                <Image src={m.img} alt={m.name} width={900} height={600} className="h-full w-full object-cover" />
-              </div>
-              <CardContent className="p-5">
-                <h3 className="text-lg font-semibold" style={{ fontFamily: "var(--font-heading)" }}>{m.name}</h3>
-                <p className="text-sm text-muted-foreground">{m.role}</p>
-              </CardContent>
-            </Card>
+          {team.map((m, index) => (
+            <motion.div
+              key={m.name}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={initialVariants}
+              transition={{ duration: 0.6, delay: index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+            >
+              <Card className="overflow-hidden glass-card">
+                <div className="h-56 w-full">
+                  <Image src={m.img} alt={m.name} width={900} height={600} className="h-full w-full object-cover" />
+                </div>
+                <CardContent className="p-5">
+                  <h3 className="text-lg font-semibold" style={{ fontFamily: "var(--font-heading)" }}>{m.name}</h3>
+                  <p className="text-sm text-muted-foreground">{m.role}</p>
+                </CardContent>
+              </Card>
+            </motion.div>
           ))}
         </div>
       </section>

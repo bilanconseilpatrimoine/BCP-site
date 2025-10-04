@@ -190,11 +190,11 @@ export default function Page() {
         <div className="mt-12 grid gap-6 sm:grid-cols-3 text-sm text-muted-foreground">
           <motion.div initial={{ opacity: 0, x: -12 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
             <div className="font-semibold text-foreground">Téléphone</div>
-            <div>01 23 45 67 89</div>
+            <div>07 65 29 96 60</div>
           </motion.div>
           <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.05 }}>
             <div className="font-semibold text-foreground">Email</div>
-            <div>contact@patrimoine-conseils.fr</div>
+            <div>contact@bilanconseilpatrimoine.com</div>
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 12 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }}>
             <div className="font-semibold text-foreground">Adresse</div>

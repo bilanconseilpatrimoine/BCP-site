@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { PieChart, Landmark, PiggyBank, Briefcase, LineChart, Shield } from "lucide-react";
@@ -7,11 +8,11 @@ import { PieChart, Landmark, PiggyBank, Briefcase, LineChart, Shield } from "luc
 const blocks = {
   investissement: [
     { icon: LineChart, title: "Allocations financières", desc: "OPCVM, ETF, mandats de gestion et solutions structurées selon votre profil." },
-    { icon: PiggyBank, title: "Épargne & assurance-vie", desc: "Contrats haut de gamme, unités de compte, fonds euro nouvelle génération." },
+    { icon: PiggyBank, title: "Épargne & capitalisation", desc: "Assurance vie de droit français et luxembourgeois, contrat de capitalisation." },
     { icon: Briefcase, title: "Private equity & immobilier", desc: "FCPR, SCPI/SCI, club deals, démembrement et immobilier géré." },
   ],
   fiscalite: [
-    { icon: Landmark, title: "Optimisation fiscale", desc: "Pacte Dutreil, PER, Girardin, dispositifs LMNP/LMP et ingénierie juridique." },
+    { icon: Landmark, title: "Optimisation fiscale", desc: "Pacte Dutreil, PER, Malraux, Monuments historiques et Déficit Foncier,dispositifs LMNP/LMP et ingénierie juridique." },
     { icon: PieChart, title: "Structuration patrimoniale", desc: "Holding, démembrement, donations, usufruit temporaire, société civile." },
   ],
   retraite: [
@@ -22,23 +23,40 @@ const blocks = {
     { icon: Landmark, title: "Transmission & succession", desc: "Dons, donations-partage, clauses bénéficiaires, stratégies intergénérationnelles." },
     { icon: Shield, title: "Protection du conjoint", desc: "Optimisation matrimoniale, clauses spécifiques, assurance-décès." },
   ],
+  "prévoyance et protection": [
+    { icon: Landmark, title: "assurance emprunteur ", desc: "Comparaison et optimisation des garanties emprunteur, délégation d'assurance, négociation des conditions." },
+  ],
 };
 
 export default function Page() {
+  const initialVariants = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0 },
+  };
+
   const renderCards = (items: { icon: any; title: string; desc: string }[]) => (
     <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      {items.map((b) => (
-        <Card key={b.title} className="transition-transform hover:-translate-y-1 hover:shadow-xl glass-card">
-          <CardHeader>
-            <div className="flex items-center gap-3">
-              <b.icon className="h-6 w-6" style={{ color: "var(--accent)" }} />
-              <CardTitle className="text-lg" style={{ fontFamily: "var(--font-heading)" }}>{b.title}</CardTitle>
-            </div>
-          </CardHeader>
-          <CardContent>
-            <p className="text-sm text-muted-foreground">{b.desc}</p>
-          </CardContent>
-        </Card>
+      {items.map((b, index) => (
+        <motion.div
+          key={b.title}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={initialVariants}
+          transition={{ duration: 0.6, delay: index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+        >
+          <Card className="transition-transform hover:scale-105 hover:shadow-xl glass-card">
+            <CardHeader>
+              <div className="flex items-center gap-3">
+                <b.icon className="h-6 w-6" style={{ color: "var(--accent)" }} />
+                <CardTitle className="text-lg" style={{ fontFamily: "var(--font-heading)" }}>{b.title}</CardTitle>
+              </div>
+            </CardHeader>
+            <CardContent>
+              <p className="text-sm text-muted-foreground">{b.desc}</p>
+            </CardContent>
+          </Card>
+        </motion.div>
       ))}
     </div>
   );
@@ -59,10 +77,27 @@ export default function Page() {
           }}
         />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 text-white">
-          <h1 className="text-4xl md:text-5xl font-semibold" style={{ fontFamily: "var(--font-heading)" }}>Nos expertises</h1>
-          <p className="mt-4 max-w-2xl text-white/90">
+          <motion.h1 
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: "-10%" }}
+            variants={initialVariants}
+            transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+            className="text-4xl md:text-5xl font-semibold" 
+            style={{ fontFamily: "var(--font-heading)" }}
+          >
+            Nos expertises
+          </motion.h1>
+          <motion.p 
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: "-10%" }}
+            variants={initialVariants}
+            transition={{ duration: 0.6, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+            className="mt-4 max-w-2xl text-white/90"
+          >
             Une vision à 360° pour orchestrer investissement, fiscalité, retraite et transmission avec exigence.
-          </p>
+          </motion.p>
         </div>
       </section>
 
@@ -73,12 +108,14 @@ export default function Page() {
             <TabsTrigger value="fiscalite">Fiscalité</TabsTrigger>
             <TabsTrigger value="retraite">Retraite</TabsTrigger>
             <TabsTrigger value="transmission">Transmission</TabsTrigger>
+            <TabsTrigger value="prévoyance et protection">Prévoyance et protection</TabsTrigger>
           </TabsList>
           <div className="mt-8 space-y-8">
             <TabsContent value="investissement">{renderCards(blocks.investissement)}</TabsContent>
             <TabsContent value="fiscalite">{renderCards(blocks.fiscalite)}</TabsContent>
             <TabsContent value="retraite">{renderCards(blocks.retraite)}</TabsContent>
             <TabsContent value="transmission">{renderCards(blocks.transmission)}</TabsContent>
+            <TabsContent value="prévoyance et protection">{renderCards(blocks["prévoyance et protection"])}</TabsContent>
           </div>
         </Tabs>
       </section>
