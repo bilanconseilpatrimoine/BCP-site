@@ -198,7 +198,7 @@ export default function Page() {
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 12 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }}>
             <div className="font-semibold text-foreground">Adresse</div>
-            <div>123 Avenue de la République, 75000 Paris</div>
+            <div>229 rue saint honoré, 75001 Paris</div>
           </motion.div>
         </div>
       </section>

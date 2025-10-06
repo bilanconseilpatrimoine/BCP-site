@@ -42,7 +42,7 @@ const partners = [
   },
   {
     name: "Nortia",
-    logo: "/logos/Nortia.png",
+    logo: "/logos/NORTIA.png",
     alt: "Logo Nortia"
   },
   {
