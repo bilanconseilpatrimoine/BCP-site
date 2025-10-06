@@ -14,7 +14,7 @@ export default function Footer() {
               <span className="text-xl font-semibold" style={{ fontFamily: "var(--font-heading)" }}>Bilan Conseil Patrimoine</span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Cabinet de courtage en gestion de patrimoine. Nous construisons des stratégies sur-mesure avec une approche humaine et pérenne.
+              Cabinet de Conseil en gestion de patrimoine. Nous construisons des stratégies sur-mesure avec une approche humaine et pérenne.
             </p>
           </div>
 
@@ -44,8 +44,8 @@ export default function Footer() {
                 <a href="mailto:contact@bilanconseilpatrimoine.com" className="hover:text-foreground hover:underline transition-colors">contact@bilanconseilpatrimoine.com</a>
               </li>
               <li className="text-muted-foreground">
-                123 Avenue de la République<br />
-                75000 Paris
+                229 rue saint honoré<br />
+                75001 Paris
               </li>
             </ul>
           </div>
@@ -86,9 +86,9 @@ export default function Footer() {
 
               {/* Réseaux sociaux */}
               <div className="flex items-center gap-3 pt-2">
-                <Link 
-                  href="https://linkedin.com/company/bilan-conseil-patrimoine" 
-                  target="_blank" 
+                <Link
+                  href="https://linkedin.com/company/bilan-conseil-patrimoine"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
                 >
@@ -97,9 +97,9 @@ export default function Footer() {
                   </svg>
                   <span className="text-xs">LinkedIn</span>
                 </Link>
-                <Link 
-                  href="https://instagram.com/bilanconseilpatrimoine" 
-                  target="_blank" 
+                <Link
+                  href="https://instagram.com/bilanconseilpatrimoine"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
                 >
