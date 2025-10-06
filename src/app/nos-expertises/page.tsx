@@ -7,9 +7,9 @@ import { PieChart, Landmark, PiggyBank, Briefcase, LineChart, Shield } from "luc
 
 const blocks = {
   investissement: [
-    { icon: LineChart, title: "Allocations financières", desc: "OPCVM, ETF, mandats de gestion et solutions structurées selon votre profil." },
     { icon: PiggyBank, title: "Épargne & capitalisation", desc: "Assurance vie de droit français et luxembourgeois, contrat de capitalisation." },
     { icon: Briefcase, title: "Private equity & immobilier", desc: "FCPR, SCPI/SCI, club deals, démembrement et immobilier géré." },
+    { icon: LineChart, title: "Allocations financières", desc: "OPCVM, ETF, mandats de gestion et solutions structurées selon votre profil." },
   ],
   fiscalite: [
     { icon: Landmark, title: "Optimisation fiscale", desc: "Pacte Dutreil, PER, Malraux, Monuments historiques et Déficit Foncier,dispositifs LMNP/LMP et ingénierie juridique." },
@@ -17,7 +17,6 @@ const blocks = {
   ],
   retraite: [
     { icon: PiggyBank, title: "Préparer la retraite", desc: "PER individuel/collectif, rachats de trimestres, simulation de droits." },
-    { icon: Shield, title: "Prévoyance & protection", desc: "Contrats TNS, cadre, homme clé, garantie croisée d'associés." },
   ],
   transmission: [
     { icon: Landmark, title: "Transmission & succession", desc: "Dons, donations-partage, clauses bénéficiaires, stratégies intergénérationnelles." },
@@ -35,7 +34,7 @@ export default function Page() {
   };
 
   const renderCards = (items: { icon: any; title: string; desc: string }[]) => (
-    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
       {items.map((b, index) => (
         <motion.div
           key={b.title}
@@ -76,14 +75,14 @@ export default function Page() {
             opacity: 0.35,
           }}
         />
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 text-white">
+        <div className="relative mx-auto max-w-7xl px-3 xs:px-4 sm:px-6 lg:px-8 py-12 sm:py-20 text-white">
           <motion.h1 
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: "-10%" }}
             variants={initialVariants}
             transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className="text-4xl md:text-5xl font-semibold" 
+            className="text-3xl xs:text-4xl sm:text-4xl md:text-5xl font-semibold" 
             style={{ fontFamily: "var(--font-heading)" }}
           >
             Nos expertises
@@ -101,14 +100,14 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+      <section className="mx-auto max-w-7xl px-3 xs:px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         <Tabs defaultValue="investissement" className="w-full">
-          <TabsList className="grid grid-cols-2 sm:flex sm:w-auto">
-            <TabsTrigger value="investissement">Investissement</TabsTrigger>
-            <TabsTrigger value="fiscalite">Fiscalité</TabsTrigger>
-            <TabsTrigger value="retraite">Retraite</TabsTrigger>
-            <TabsTrigger value="transmission">Transmission</TabsTrigger>
-            <TabsTrigger value="prévoyance et protection">Prévoyance et protection</TabsTrigger>
+          <TabsList className="grid grid-cols-1 xs:grid-cols-2 sm:flex sm:w-auto h-auto w-full sm:w-auto">
+            <TabsTrigger value="investissement" className="text-xs sm:text-sm w-full sm:w-auto">Investissement</TabsTrigger>
+            <TabsTrigger value="fiscalite" className="text-xs sm:text-sm w-full sm:w-auto">Fiscalité</TabsTrigger>
+            <TabsTrigger value="retraite" className="text-xs sm:text-sm w-full sm:w-auto">Retraite</TabsTrigger>
+            <TabsTrigger value="transmission" className="text-xs sm:text-sm w-full sm:w-auto">Transmission</TabsTrigger>
+            <TabsTrigger value="prévoyance et protection" className="text-xs sm:text-sm col-span-1 xs:col-span-2 sm:col-span-1 w-full sm:w-auto">Prévoyance et protection</TabsTrigger>
           </TabsList>
           <div className="mt-8 space-y-8">
             <TabsContent value="investissement">{renderCards(blocks.investissement)}</TabsContent>

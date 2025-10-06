@@ -48,7 +48,7 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
             className="mt-6 max-w-2xl text-white/90"
           >
-            Un accompagnement humain et indépendant pour révéler le potentiel de votre patrimoine: stratégie globale, investissements, fiscalité et transmission par des conseils experts certifiés en Gestion de Patrimoine depuis plus de 15 ans.
+            Révélez tout le potentiel de votre patrimoine grâce à un accompagnement humain, indépendant et sur-mesure. Stratégie globale, investissements, fiscalité et transmission : depuis plus de 15 ans, nos experts certifiés en Gestion de Patrimoine vous aident à bâtir l’avenir que vous méritez.
           </motion.p>
           <motion.div 
             initial="hidden"
