@@ -71,14 +71,15 @@ export default function Page() {
               viewport={{ once: true, amount: 0.3 }}
               variants={initialVariants}
               transition={{ duration: 0.6, delay: index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+              className="h-full"
             >
-              <Card className="glass-card">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <s.icon className="h-7 w-7" style={{ color: "var(--accent)" }} />
-                    <div>
-                      <h3 className="text-lg font-semibold" style={{ fontFamily: "var(--font-heading)" }}>{s.title}</h3>
-                      <p className="mt-2 text-sm text-muted-foreground">{s.desc}</p>
+              <Card className="h-full flex flex-col glass-card">
+                <CardContent className="p-6 flex-1 flex flex-col justify-start">
+                  <div className="flex items-start gap-4 h-full">
+                    <s.icon className="h-7 w-7 flex-shrink-0" style={{ color: "var(--accent)" }} />
+                    <div className="flex-1 flex flex-col">
+                      <h3 className="text-lg font-semibold leading-tight" style={{ fontFamily: "var(--font-heading)" }}>{s.title}</h3>
+                      <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
                     </div>
                   </div>
                 </CardContent>

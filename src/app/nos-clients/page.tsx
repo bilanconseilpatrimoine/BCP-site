@@ -124,35 +124,36 @@ export default function Page() {
               viewport={{ once: true, amount: 0.3 }}
               variants={initialVariants}
               transition={{ duration: 0.6, delay: index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+              className="h-full"
             >
-              <Card className="transition-transform hover:scale-105 hover:shadow-xl glass-card">
-              <CardHeader>
-                <div className="flex items-center gap-3 mb-4">
-                  <profile.icon className="h-8 w-8" style={{ color: "var(--accent)" }} />
-                  <CardTitle className="text-xl" style={{ fontFamily: "var(--font-heading)" }}>
-                    {profile.title}
-                  </CardTitle>
-                </div>
-                <p className="text-muted-foreground leading-relaxed">
-                  {profile.description}
-                </p>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-2">
-                  <h4 className="font-medium text-sm text-foreground/80 mb-3">Solutions clés :</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {profile.highlights.map((highlight, idx) => (
-                      <span
-                        key={idx}
-                        className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-accent/10 text-accent border border-accent/20"
-                      >
-                        {highlight}
-                      </span>
-                    ))}
+              <Card className="h-full flex flex-col transition-transform hover:scale-105 hover:shadow-xl glass-card">
+                <CardHeader className="flex-shrink-0">
+                  <div className="flex items-center gap-3 mb-4">
+                    <profile.icon className="h-8 w-8 flex-shrink-0" style={{ color: "var(--accent)" }} />
+                    <CardTitle className="text-xl leading-tight" style={{ fontFamily: "var(--font-heading)" }}>
+                      {profile.title}
+                    </CardTitle>
                   </div>
-                </div>
-              </CardContent>
-            </Card>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {profile.description}
+                  </p>
+                </CardHeader>
+                <CardContent className="flex-1 flex flex-col justify-start">
+                  <div className="space-y-2">
+                    <h4 className="font-medium text-sm text-foreground/80 mb-3">Solutions clés :</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {profile.highlights.map((highlight, idx) => (
+                        <span
+                          key={idx}
+                          className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-accent/10 text-accent border border-accent/20"
+                        >
+                          {highlight}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
             </motion.div>
           ))}
         </div>
