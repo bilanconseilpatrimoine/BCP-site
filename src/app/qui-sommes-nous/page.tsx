@@ -110,14 +110,15 @@ export default function Page() {
               viewport={{ once: true, amount: 0.3 }}
               variants={initialVariants}
               transition={{ duration: 0.6, delay: index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+              className="h-full"
             >
-              <Card className="overflow-hidden glass-card">
-                <div className="h-56 w-full">
+              <Card className="h-full flex flex-col overflow-hidden glass-card p-0">
+                <div className="h-56 w-full flex-shrink-0 overflow-hidden rounded-t-lg">
                   <Image src={m.img} alt={m.name} width={900} height={600} className="h-full w-full object-cover" />
                 </div>
-                <CardContent className="p-5">
-                  <h3 className="text-lg font-semibold" style={{ fontFamily: "var(--font-heading)" }}>{m.name}</h3>
-                  <p className="text-sm text-muted-foreground">{m.role}</p>
+                <CardContent className="p-5 flex-1 flex flex-col justify-start">
+                  <h3 className="text-lg font-semibold leading-tight" style={{ fontFamily: "var(--font-heading)" }}>{m.name}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{m.role}</p>
                 </CardContent>
               </Card>
             </motion.div>

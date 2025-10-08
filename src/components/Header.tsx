@@ -54,9 +54,9 @@ export const Header = () => {
 
         {/* Responsive nav - Tablet */}
         <nav className="hidden md:flex lg:hidden flex-col gap-1">
-          {/* Première ligne - 3 premiers liens */}
+          {/* Première ligne - 4 premiers liens */}
           <div className="flex items-center gap-2">
-            {nav.slice(0, 3).map((n) => {
+            {nav.slice(0, 4).map((n) => {
               const active = n.href === "/" ? pathname === "/" : pathname.startsWith(n.href);
               return (
                 <Link
@@ -79,7 +79,7 @@ export const Header = () => {
           
           {/* Deuxième ligne - reste des liens + bouton RDV */}
           <div className="flex items-center gap-2">
-            {nav.slice(3).map((n) => {
+            {nav.slice(4).map((n) => {
               const active = n.href === "/" ? pathname === "/" : pathname.startsWith(n.href);
               return (
                 <Link
@@ -98,12 +98,6 @@ export const Header = () => {
                  </Link>
               );
             })}
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md px-2 py-1 text-xs font-semibold text-black shadow-none gold-gradient shimmer-gold hover:scale-105 hover:shadow-lg hover:shadow-[#D4AF37]/25 active:scale-95 transition-all duration-200 min-h-8 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]"
-            >
-              RDV
-            </Link>
           </div>
         </nav>
 
