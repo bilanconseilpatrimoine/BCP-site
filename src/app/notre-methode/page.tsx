@@ -8,7 +8,7 @@ import { CheckCircle2, Compass, Target, ChartLine, ShieldHalf, Handshake } from 
 export default function Page() {
   const steps = [
     { icon: Compass, title: "Découverte & Bilan", desc: "Comprendre et analyser votre situation personnelle, professionnelle, patrimoniale et fiscale." },
-    { icon: Target, title: "Objectifs & Priorités", desc: "Définir des objectifs clairs par: enrichissement, protection familiale, optimisation fiscale et successorale." },
+    { icon: Target, title: "Objectifs & Priorités", desc: "Définir des objectifs précis : enrichissement, protection familiale, optimisation fiscale et successorale." },
     { icon: ChartLine, title: "Stratégie sur-mesure", desc: "Construire une architecture patrimoniale adaptée à votre horizon et votre profil de risque." },
     { icon: ShieldHalf, title: "Mise en œuvre sécurisée", desc: "sélection des solutions hauts de gamme avec des conditions d'accès préférentielles." },
     { icon: Handshake, title: "Suivi & arbitrages", desc: "Mesurer les performances et ajuster en continu face aux évolutions de vie et de marché." },

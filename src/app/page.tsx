@@ -17,7 +17,7 @@ export default function Home() {
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 royal-gradient opacity-90" />
-        <div className="absolute inset-0" style={{ backgroundImage: "url(https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2000&auto=format&fit=crop)", backgroundSize: "cover", backgroundPosition: "center", mixBlendMode: "overlay", opacity: 0.35 }} />
+        <div className="absolute inset-0" style={{ backgroundImage: "url(https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/c181b938-2390-4a02-8077-4e7f443c640e/generated_images/realistic-mountain-landscape-with-a-wind-fa2bd6f1-20251008211908.jpg)", backgroundSize: "cover", backgroundPosition: "center", mixBlendMode: "overlay", opacity: 0.35 }} />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 sm:py-32 text-white">
           <motion.span 
             initial="hidden"
@@ -75,7 +75,7 @@ export default function Home() {
             {
               title: "Indépendance & Transparence",
               desc: "Nous sélectionnons les meilleures solutions du marché, en toute objectivité.",
-              img: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1600&auto=format&fit=crop",
+              img: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/c181b938-2390-4a02-8077-4e7f443c640e/generated_images/professional-financial-advisor-concept-s-9d1dd6f1-20251008211916.jpg",
             },
             {
               title: "Accompagnement humain",
@@ -95,14 +95,15 @@ export default function Home() {
               viewport={{ once: true, amount: 0.3 }}
               variants={initialVariants}
               transition={{ duration: 0.6, delay: index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+              className="h-full"
             >
-              <Card className="overflow-hidden glass-card">
-                <div className="h-40 w-full">
+              <Card className="h-full flex flex-col overflow-hidden glass-card p-0">
+                <div className="h-40 w-full flex-shrink-0 overflow-hidden rounded-t-lg">
                   <Image src={v.img} alt="" width={1200} height={400} className="h-full w-full object-cover" />
                 </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold" style={{ fontFamily: "var(--font-heading)" }}>{v.title}</h3>
-                  <p className="mt-2 text-muted-foreground">{v.desc}</p>
+                <CardContent className="p-6 flex-1 flex flex-col justify-start">
+                  <h3 className="text-xl font-semibold leading-tight" style={{ fontFamily: "var(--font-heading)" }}>{v.title}</h3>
+                  <p className="mt-2 text-muted-foreground leading-relaxed">{v.desc}</p>
                 </CardContent>
               </Card>
             </motion.div>

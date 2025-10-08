@@ -13,9 +13,19 @@ export default function Footer() {
               <div className="h-10 w-10 rounded-full gold-gradient" />
               <span className="text-xl font-semibold" style={{ fontFamily: "var(--font-heading)" }}>Bilan Conseil Patrimoine</span>
             </div>
-            <p className="text-sm text-muted-foreground leading-relaxed">
+            <p className="text-sm text-muted-foreground leading-relaxed mb-6">
               Cabinet de Conseil en gestion de patrimoine. Nous construisons des stratégies sur-mesure avec une approche humaine et pérenne.
             </p>
+            {/* Logo CNCGP */}
+            <div className="pt-4 border-t border-gray-200">
+              <Image
+                src="/logos/CNCGP.png"
+                alt="Logo CNCGP"
+                width={100}
+                height={50}
+                className="h-auto w-auto max-w-[100px] opacity-80"
+              />
+            </div>
           </div>
 
           {/* Navigation */}

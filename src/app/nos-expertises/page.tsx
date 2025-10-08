@@ -16,14 +16,15 @@ const blocks = {
     { icon: PieChart, title: "Structuration patrimoniale", desc: "Holding, démembrement, donations, usufruit temporaire, société civile." },
   ],
   retraite: [
-    { icon: PiggyBank, title: "Préparer la retraite", desc: "PER individuel/collectif, rachats de trimestres, simulation de droits." },
+    { icon: PiggyBank, title: "Préparer la retraite", desc: "PER individuel/Epargne salariale : PEE, PERCOL, rachats de trimestres, simulation de droits." },
   ],
   transmission: [
     { icon: Landmark, title: "Transmission & succession", desc: "Dons, donations-partage, clauses bénéficiaires, stratégies intergénérationnelles." },
     { icon: Shield, title: "Protection du conjoint", desc: "Optimisation matrimoniale, clauses spécifiques, assurance-décès." },
   ],
   "prévoyance et protection": [
-    { icon: Landmark, title: "assurance emprunteur ", desc: "Comparaison et optimisation des garanties emprunteur, délégation d'assurance, négociation des conditions." },
+    { icon: Landmark, title: "PRÉVOYANCE", desc: "Amélioration des garanties en assurance emprunteur, optimisation du coût global jusqu'à 60% d'économie réalisée." },
+    { icon: Landmark, title: "assurance emprunteur", desc: "Protection financière du TNS, du dirigeant d'entreprise ou du cadre d'entreprise en cas d’aléas de la vie (décès, invalidité, incapacité, dépendance) Sélection rigoureuse du partenaire assureur en fonction de la typologie du métier" },
   ],
 };
 
@@ -43,16 +44,17 @@ export default function Page() {
           viewport={{ once: true, amount: 0.3 }}
           variants={initialVariants}
           transition={{ duration: 0.6, delay: index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+          className="h-full"
         >
-          <Card className="transition-transform hover:scale-105 hover:shadow-xl glass-card">
-            <CardHeader>
+          <Card className="h-full flex flex-col transition-transform hover:scale-105 hover:shadow-xl glass-card">
+            <CardHeader className="flex-shrink-0">
               <div className="flex items-center gap-3">
-                <b.icon className="h-6 w-6" style={{ color: "var(--accent)" }} />
-                <CardTitle className="text-lg" style={{ fontFamily: "var(--font-heading)" }}>{b.title}</CardTitle>
+                <b.icon className="h-6 w-6 flex-shrink-0" style={{ color: "var(--accent)" }} />
+                <CardTitle className="text-lg leading-tight" style={{ fontFamily: "var(--font-heading)" }}>{b.title}</CardTitle>
               </div>
             </CardHeader>
-            <CardContent>
-              <p className="text-sm text-muted-foreground">{b.desc}</p>
+            <CardContent className="flex-1 flex flex-col justify-start">
+              <p className="text-sm text-muted-foreground leading-relaxed">{b.desc}</p>
             </CardContent>
           </Card>
         </motion.div>
@@ -107,7 +109,7 @@ export default function Page() {
             <TabsTrigger value="fiscalite" className="text-xs sm:text-sm w-full sm:w-auto">Fiscalité</TabsTrigger>
             <TabsTrigger value="retraite" className="text-xs sm:text-sm w-full sm:w-auto">Retraite</TabsTrigger>
             <TabsTrigger value="transmission" className="text-xs sm:text-sm w-full sm:w-auto">Transmission</TabsTrigger>
-            <TabsTrigger value="prévoyance et protection" className="text-xs sm:text-sm col-span-1 xs:col-span-2 sm:col-span-1 w-full sm:w-auto">Prévoyance et protection</TabsTrigger>
+            <TabsTrigger value="prévoyance et protection" className="text-xs sm:text-sm col-span-1 xs:col-span-2 sm:col-span-1 w-full sm:w-auto">Prévoyance et Protection Familiale</TabsTrigger>
           </TabsList>
           <div className="mt-8 space-y-8">
             <TabsContent value="investissement">{renderCards(blocks.investissement)}</TabsContent>
