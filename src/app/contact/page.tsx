@@ -188,10 +188,6 @@ export default function Page() {
         </motion.form>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-3 text-sm text-muted-foreground">
-          <motion.div initial={{ opacity: 0, x: -12 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
-            <div className="font-semibold text-foreground">Téléphone</div>
-            <div>07 65 29 96 60</div>
-          </motion.div>
           <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.05 }}>
             <div className="font-semibold text-foreground">Email</div>
             <div>contact@bilanconseilpatrimoine.com</div>
@@ -199,6 +195,7 @@ export default function Page() {
           <motion.div initial={{ opacity: 0, x: 12 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }}>
             <div className="font-semibold text-foreground">Adresse</div>
             <div>229 rue saint honoré, 75001 Paris</div>
+            <div>Cours des bastions 13, 1205 Genève</div>
           </motion.div>
         </div>
       </section>

@@ -48,14 +48,15 @@ export default function Footer() {
             <h4 className="text-sm font-semibold mb-6 text-foreground">Contact</h4>
             <ul className="space-y-4 text-sm">
               <li className="text-muted-foreground">
-                <a href="tel:0765299660" className="hover:text-foreground hover:underline transition-colors">07 65 29 96 60</a>
-              </li>
-              <li className="text-muted-foreground">
                 <a href="mailto:contact@bilanconseilpatrimoine.com" className="hover:text-foreground hover:underline transition-colors">contact@bilanconseilpatrimoine.com</a>
               </li>
               <li className="text-muted-foreground">
                 229 rue saint honoré<br />
                 75001 Paris
+              </li>
+              <li className="text-muted-foreground">
+                Cours des bastions 13<br />
+                1205 Genève
               </li>
             </ul>
           </div>

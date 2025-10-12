@@ -48,7 +48,7 @@ export default function MentionsLegalesPage() {
         >
           <h2 className="text-2xl font-semibold" style={{ fontFamily: "var(--font-heading)" }}>Éditeur du site</h2>
           <p>
-            Bilan Conseil Patrimoine — 229 rue saint honoré, 75001 Paris — Tél. 07 65 29 96 60 —
+            Bilan Conseil Patrimoine — 229 rue saint honoré, 75001 Paris France — cours des bastions 13, 1205 Genève Suisse —
             Email: contact@bilanconseilpatrimoine.com
           </p>
           <p>Directeur de la publication: Mme Aknin Noémie.</p>

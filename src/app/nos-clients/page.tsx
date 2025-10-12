@@ -165,9 +165,6 @@ export default function Page() {
           <div className="flex justify-center mb-6">
             <Target className="h-12 w-12" style={{ color: "var(--accent)" }} />
           </div>
-          <h2 className="text-3xl font-semibold mb-4" style={{ fontFamily: "var(--font-heading)" }}>
-            Votre profil vous correspond-il ?
-          </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
             Chaque situation est unique. Discutons de votre projet patrimonial 
             et découvrons ensemble les solutions les plus adaptées à vos objectifs.

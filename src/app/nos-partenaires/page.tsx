@@ -22,8 +22,8 @@ const partners = [
   },
   {
     name: "Eiffel",
-    logo: "/logos/eiffel.png",
-    alt: "Logo Eiffel"
+    logo: "/logos/swisslife.png",
+    alt: "Logo swisslife"
   },
   {
     name: "Generali",
@@ -42,8 +42,8 @@ const partners = [
   },
   {
     name: "Nortia",
-    logo: "/logos/NORTIA.png",
-    alt: "Logo Nortia"
+    logo: "/logos/J_sarazin.png",
+    alt: "Logo sarazin"
   },
   {
     name: "Odobhf",
@@ -52,8 +52,8 @@ const partners = [
   },
   {
     name: "Offi Invest",
-    logo: "/logos/offi_invest.png",
-    alt: "Logo Offi Invest"
+    logo: "/logos/swissquote.png",
+    alt: "Logo swiss quote invest"
   },
   {
     name: "Rothschild",
@@ -67,8 +67,8 @@ const partners = [
   },
   {
     name: "UAF Life",
-    logo: "/logos/uaf_life.png",
-    alt: "Logo UAF Life"
+    logo: "/logos/UBS.png",
+    alt: "Logo UBS"
   },
 ];
 

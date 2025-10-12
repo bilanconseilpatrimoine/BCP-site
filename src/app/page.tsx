@@ -19,14 +19,15 @@ export default function Home() {
         <div className="absolute inset-0 royal-gradient opacity-90" />
         <div className="absolute inset-0" style={{ backgroundImage: "url(https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/c181b938-2390-4a02-8077-4e7f443c640e/generated_images/realistic-mountain-landscape-with-a-wind-fa2bd6f1-20251008211908.jpg)", backgroundSize: "cover", backgroundPosition: "center", mixBlendMode: "overlay", opacity: 0.35 }} />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 sm:py-32 text-white">
-          <motion.span 
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, margin: "-10%" }}
-            variants={initialVariants}
-            transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-            className="inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold bg-white/10 ring-1 ring-white/20"
-          >
+          <div className="mt-18 sm:mt-22">
+            <motion.span 
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, margin: "-10%" }}
+              variants={initialVariants}
+              transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+              className="inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold bg-white/10 ring-1 ring-white/20"
+            >
             Excellence • Confiance • Sur-mesure
           </motion.span>
           <motion.h1 
@@ -48,7 +49,8 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
             className="mt-6 max-w-2xl text-white/90"
           >
-            Révélez tout le potentiel de votre patrimoine grâce à un accompagnement humain, indépendant et sur-mesure. Stratégie globale, investissements, fiscalité et transmission : depuis plus de 15 ans, nos experts certifiés en Gestion de Patrimoine vous aident à bâtir l’avenir que vous méritez.
+            Révélez tout le potentiel de votre patrimoine grâce à un accompagnement humain, indépendant et sur-mesure. <br />
+            Stratégie globale, investissements, fiscalité et transmission : depuis plus de 15 ans, nos experts certifiés en Gestion de Patrimoine vous aident à bâtir l’avenir que vous méritez.
           </motion.p>
           <motion.div 
             initial="hidden"
@@ -65,6 +67,7 @@ export default function Home() {
               <Link href="/notre-methode">Découvrir notre méthode</Link>
             </Button> */}
           </motion.div>
+          </div>
         </div>
       </section>
 
