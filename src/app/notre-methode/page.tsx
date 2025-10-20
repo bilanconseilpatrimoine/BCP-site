@@ -71,9 +71,10 @@ export default function Page() {
               viewport={{ once: true, amount: 0.3 }}
               variants={initialVariants}
               transition={{ duration: 0.6, delay: index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+              whileHover={{ y: -8, scale: 1.02 }}
               className="h-full"
             >
-              <Card className="h-full flex flex-col glass-card">
+              <Card className="h-full flex flex-col transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20 border-l-4 border-l-blue-600/20 hover:border-l-blue-600/60 hover:bg-gradient-to-br hover:from-blue-50/30 hover:to-indigo-50/20 glass-card">
                 <CardContent className="p-6 flex-1 flex flex-col justify-start">
                   <div className="flex items-start gap-4 h-full">
                     <s.icon className="h-7 w-7 flex-shrink-0" style={{ color: "var(--accent)" }} />
@@ -97,33 +98,79 @@ export default function Page() {
           viewport={{ once: true, amount: 0.3 }}
           variants={initialVariants}
           transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="rounded-2xl border glass-card p-6 md:p-8"
+          className="rounded-2xl border glass-card p-6 md:p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gradient-to-br from-white to-blue-50/20"
         >
-          <h2 className="text-2xl font-semibold" style={{ fontFamily: "var(--font-heading)" }}>Ce qui fait la différence</h2>
-          <Accordion type="single" collapsible className="mt-4">
-            <AccordionItem value="independance">
-              <AccordionTrigger className="text-left">Indépendance et transparence des rémunérations</AccordionTrigger>
-              <AccordionContent>
-                Nos conseils sont délivrés en totale objectivité, avec une transparence claire sur les frais et notre mode de rémunération.
+          <div className="relative">
+            <h2 className="text-2xl font-semibold ml-6" style={{ fontFamily: "var(--font-heading)" }}>Ce qui fait la différence</h2>
+          </div>
+          <Accordion type="single" collapsible className="mt-6">
+            <AccordionItem value="independance" className="border-l-4 border-l-transparent hover:border-l-blue-600/30 transition-colors duration-300">
+              <AccordionTrigger className="text-left hover:bg-blue-50/30 rounded-lg px-3 py-2 transition-colors duration-300 no-underline hover:no-underline">
+                <span className="font-medium">Indépendance et transparence des rémunérations</span>
+              </AccordionTrigger>
+              <AccordionContent className="px-3 py-2">
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="text-muted-foreground leading-relaxed"
+                >
+                  Nos conseils sont délivrés en totale objectivité, avec une transparence claire sur les frais et notre mode de rémunération.
+                </motion.div>
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="architecture-ouverte">
-              <AccordionTrigger className="text-left">Architecture ouverte et sélection rigoureuse</AccordionTrigger>
-              <AccordionContent>
-                Accès à une large gamme de partenaires: sociétés de gestion, assureurs, banques privées et acteurs immobiliers de premier plan.
+            <AccordionItem value="architecture-ouverte" className="border-l-4 border-l-transparent hover:border-l-blue-600/30 transition-colors duration-300">
+              <AccordionTrigger className="text-left hover:bg-blue-50/30 rounded-lg px-3 py-2 transition-colors duration-300 no-underline hover:no-underline">
+                <span className="font-medium">Architecture ouverte et sélection rigoureuse</span>
+              </AccordionTrigger>
+              <AccordionContent className="px-3 py-2">
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="text-muted-foreground leading-relaxed"
+                >
+                  Accès à une large gamme de partenaires: sociétés de gestion, assureurs, banques privées et acteurs immobiliers de premier plan.
+                </motion.div>
               </AccordionContent>
             </AccordionItem>
-            <AccordionItem value="suivi">
-              <AccordionTrigger className="text-left">Suivi proactif et reporting</AccordionTrigger>
-              <AccordionContent>
-                Un comité de suivi périodique avec tableaux de bord, indicateurs de risque et analyse de performance.
+            <AccordionItem value="suivi" className="border-l-4 border-l-transparent hover:border-l-blue-600/30 transition-colors duration-300">
+              <AccordionTrigger className="text-left hover:bg-blue-50/30 rounded-lg px-3 py-2 transition-colors duration-300 no-underline hover:no-underline">
+                <span className="font-medium">Suivi proactif et reporting</span>
+              </AccordionTrigger>
+              <AccordionContent className="px-3 py-2">
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="text-muted-foreground leading-relaxed"
+                >
+                  Un comité de suivi périodique avec tableaux de bord, indicateurs de risque et analyse de performance.
+                </motion.div>
               </AccordionContent>
             </AccordionItem>
           </Accordion>
-          <div className="mt-6 flex items-center gap-3 text-sm text-muted-foreground">
-            <CheckCircle2 className="h-5 w-5" style={{ color: "var(--accent)" }} />
-            Démarche documentée et conforme (ORIAS, DDA).
-          </div>
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="mt-6 flex items-center gap-3 text-sm text-muted-foreground"
+          >
+            <motion.div
+              animate={{ 
+                scale: [1, 1.1, 1],
+                rotate: [0, 5, 0]
+              }}
+              transition={{ 
+                duration: 2,
+                repeat: Infinity,
+                repeatDelay: 3
+              }}
+            >
+              <CheckCircle2 className="h-5 w-5" style={{ color: "var(--accent)" }} />
+            </motion.div>
+            <span className="font-medium">Démarche documentée et conforme (ORIAS, DDA).</span>
+          </motion.div>
         </motion.div>
       </section>
     </main>

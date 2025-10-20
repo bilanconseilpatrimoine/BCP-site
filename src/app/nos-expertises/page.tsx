@@ -44,9 +44,10 @@ export default function Page() {
           viewport={{ once: true, amount: 0.3 }}
           variants={initialVariants}
           transition={{ duration: 0.6, delay: index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+          whileHover={{ y: -8, scale: 1.02 }}
           className="h-full"
         >
-          <Card className="h-full flex flex-col transition-transform hover:scale-105 hover:shadow-xl glass-card">
+          <Card className="h-full flex flex-col transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20 border-l-4 border-l-blue-600/20 hover:border-l-blue-600/60 hover:bg-gradient-to-br hover:from-blue-50/30 hover:to-indigo-50/20 glass-card">
             <CardHeader className="flex-shrink-0">
               <div className="flex items-center gap-3">
                 <b.icon className="h-6 w-6 flex-shrink-0" style={{ color: "var(--accent)" }} />
