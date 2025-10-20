@@ -145,7 +145,12 @@ export default function Page() {
                       {profile.highlights.map((highlight, idx) => (
                         <span
                           key={idx}
-                          className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-accent/10 text-accent border border-accent/20"
+                          className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border"
+                          style={{ 
+                            backgroundColor: 'rgba(30, 58, 138, 0.15)',
+                            color: '#1e3a8a',
+                            borderColor: 'rgba(30, 58, 138, 0.3)'
+                          }}
                         >
                           {highlight}
                         </span>
