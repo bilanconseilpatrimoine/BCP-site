@@ -23,14 +23,18 @@ export const Header = () => {
       <div className="mx-auto max-w-7xl px-2 sm:px-3 lg:px-4 h-32 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
           <div className="h-9 w-9 rounded-full gold-gradient shadow-sm" />
-          <div className="leading-tight">
-            <span className="block text-[11px] text-muted-foreground tracking-[0.2em]">CABINET</span>
-            <span className="block text-lg font-semibold" style={{ fontFamily: "var(--font-heading)" }}>Bilan Conseil Patrimoine</span>
+          <div className="flex flex-col items-center">
+            <div className="flex items-center gap-2">
+              <span className="text-lg font-semibold text-[#1A2B6D]" style={{ fontFamily: "var(--font-heading)" }}>BILAN</span>
+              <span className="text-[11px] text-muted-foreground tracking-[0.2em]">CABINET</span>
+              <span className="text-lg font-semibold text-[#1A2B6D]" style={{ fontFamily: "var(--font-heading)" }}>CONSEIL</span>
+            </div>
+            <span className="text-lg font-semibold text-[#1A2B6D]" style={{ fontFamily: "var(--font-heading)" }}>PATRIMOINE</span>
           </div>
         </Link>
 
         {/* Responsive nav - Desktop */}
-        <nav className="hidden lg:flex items-center gap-4 xl:gap-6">
+        <nav className="hidden lg:flex items-center gap-4 xl:gap-6 ml-10">
           {nav.map((n) => {
             const active = n.href === "/" ? pathname === "/" : pathname.startsWith(n.href);
             return (

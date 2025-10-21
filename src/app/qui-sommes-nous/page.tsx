@@ -7,17 +7,17 @@ import { CheckCircle2, Star, Shield, Eye, Users, Target, Award } from "lucide-re
 const values = [
   {
     title: "Excellence",
-    description: "Plus de 15 ans d'expérience et une veille constante des marchés",
+    description: "Plus de 15 ans d'expérience et une veille constante des marchés.",
     icon: Star,
   },
   {
     title: "Indépendance",
-    description: "Des décisions libres et objectives",
+    description: "Des décisions libres et objectives.",
     icon: Shield,
   },
   {
     title: "Transparence",
-    description: "Des conseils clairs, accessibles et compréhensibles",
+    description: "Des conseils clairs, accessibles et compréhensibles.",
     icon: Eye,
   },
 ];
@@ -116,7 +116,7 @@ export default function Page() {
               Notre équipe
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-3xl leading-relaxed ml-6">
-              Notre équipe rassemble des expertises complémentaires pour vous offrir un accompagnement à 360°
+              Notre équipe rassemble des expertises complémentaires pour vous offrir un accompagnement à 360°.
             </p>
           </div>
           <div className="grid gap-6 sm:grid-cols-3">
@@ -162,7 +162,7 @@ export default function Page() {
               Notre méthodologie
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-3xl leading-relaxed ml-6">
-              Chaque décision repose sur une méthodologie rigoureuse
+              Chaque décision repose sur une méthodologie : rigoureuse
             </p>
           </div>
           <div className="space-y-4 max-w-3xl">

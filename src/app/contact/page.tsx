@@ -169,7 +169,7 @@ export default function Page() {
           <motion.div className="flex items-start gap-3" initial={{ opacity: 0 }} whileInView={{ opacity: 1, transition: { delay: 0.25 } }} viewport={{ once: true }}>
             <Checkbox id="consent" checked={consent} onCheckedChange={(v) => setConsent(Boolean(v))} />
             <Label htmlFor="consent" className="text-sm text-muted-foreground">
-              J'accepte d'être contacté(e) et la politique de confidentialité.
+              J'accepte la politique de confidentialité et d'être contacté(e).
             </Label>
           </motion.div>
 

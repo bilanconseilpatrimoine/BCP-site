@@ -24,7 +24,7 @@ const blocks = {
   ],
   "prévoyance et protection": [
     { icon: Landmark, title: "PRÉVOYANCE", desc: "Amélioration des garanties en assurance emprunteur, optimisation du coût global jusqu'à 60% d'économie réalisée." },
-    { icon: Landmark, title: "assurance emprunteur", desc: "Protection financière du TNS, du dirigeant d'entreprise ou du cadre d'entreprise en cas d’aléas de la vie (décès, invalidité, incapacité, dépendance) Sélection rigoureuse du partenaire assureur en fonction de la typologie du métier" },
+    { icon: Landmark, title: "assurance emprunteur", desc: "Protection financière du TNS, du dirigeant d'entreprise ou du cadre d'entreprise en cas d’aléas de la vie (décès, invalidité, incapacité, dépendance) Sélection rigoureuse du partenaire assureur en fonction de la typologie du métier." },
   ],
 };
 
