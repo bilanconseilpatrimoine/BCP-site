@@ -24,9 +24,9 @@ export const Header = () => {
         <Link href="/" className="flex items-center gap-3">
           <div className="h-9 w-9 rounded-full gold-gradient shadow-sm" />
           <div className="flex flex-col items-center">
+            <span className="text-[11px] text-muted-foreground tracking-[0.2em] mb-1">CABINET</span>
             <div className="flex items-center gap-2">
               <span className="text-lg font-semibold text-[#1A2B6D]" style={{ fontFamily: "var(--font-heading)" }}>BILAN</span>
-              <span className="text-[11px] text-muted-foreground tracking-[0.2em]">CABINET</span>
               <span className="text-lg font-semibold text-[#1A2B6D]" style={{ fontFamily: "var(--font-heading)" }}>CONSEIL</span>
             </div>
             <span className="text-lg font-semibold text-[#1A2B6D]" style={{ fontFamily: "var(--font-heading)" }}>PATRIMOINE</span>
