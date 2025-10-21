@@ -11,10 +11,18 @@ export default function Footer() {
           <div className="md:col-span-1">
             <div className="flex items-center gap-3 mb-6">
               <div className="h-10 w-10 rounded-full gold-gradient" />
-              <span className="text-xl font-semibold" style={{ fontFamily: "var(--font-heading)" }}>Bilan Conseil Patrimoine</span>
+              <div className="flex flex-col items-center">
+                <span className="text-[11px] text-muted-foreground tracking-[0.2em] mb-1">CABINET</span>
+                <div className="flex items-center gap-2">
+                  <span className="text-lg font-semibold text-[#1A2B6D]" style={{ fontFamily: "var(--font-heading)" }}>BILAN</span>
+                  <span className="text-lg font-semibold text-[#1A2B6D]" style={{ fontFamily: "var(--font-heading)" }}>CONSEIL</span>
+                </div>
+                <span className="text-lg font-semibold text-[#1A2B6D]" style={{ fontFamily: "var(--font-heading)" }}>PATRIMOINE</span>
+              </div>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed mb-6">
-              Cabinet de Conseil en gestion de patrimoine. Nous construisons des stratégies sur-mesure avec une approche humaine et pérenne.
+              Cabinet de Conseil en gestion de patrimoine.<br />
+              Nous construisons des stratégies sur-mesure avec une approche humaine et pérenne.
             </p>
             {/* Logo CNCGP */}
             <div className="pt-4 border-t border-gray-200">
