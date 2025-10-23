@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { PieChart, Landmark, PiggyBank, Briefcase, LineChart, Shield } from "lucide-react";
+import { useState } from "react";
 
 const blocks = {
   investissement: [
@@ -23,30 +24,44 @@ const blocks = {
     { icon: Shield, title: "Protection du conjoint", desc: "Optimisation matrimoniale, clauses spécifiques, assurance-décès." },
   ],
   "prévoyance et protection": [
-    { icon: Landmark, title: "PRÉVOYANCE", desc: "Amélioration des garanties en assurance emprunteur, optimisation du coût global jusqu'à 60% d'économie réalisée." },
-    { icon: Landmark, title: "assurance emprunteur", desc: "Protection financière du TNS, du dirigeant d'entreprise ou du cadre d'entreprise en cas d’aléas de la vie (décès, invalidité, incapacité, dépendance) Sélection rigoureuse du partenaire assureur en fonction de la typologie du métier." },
+    { icon: Landmark, title: "PRÉVOYANCE", desc: "Protection financière du TNS, du dirigeant d'entreprise ou du cadre d'entreprise en cas d’aléas de la vie (décès, invalidité, incapacité, dépendance) Sélection rigoureuse du partenaire assureur en fonction de la typologie du métier." },
+    { icon: Landmark, title: "assurance emprunteur", desc: "Amélioration des garanties en assurance emprunteur, optimisation du coût global jusqu'à 60% d'économie réalisée." },
   ],
 };
 
 export default function Page() {
+  const [selectedCard, setSelectedCard] = useState<string | null>(null);
+
   const initialVariants = {
     hidden: { opacity: 0, y: 20 },
     show: { opacity: 1, y: 0 },
   };
 
+  const handleCardClick = (cardTitle: string) => {
+    if (selectedCard === cardTitle) {
+      setSelectedCard(null);
+    } else {
+      setSelectedCard(cardTitle);
+    }
+  };
+
   const renderCards = (items: { icon: any; title: string; desc: string }[]) => (
     <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-      {items.map((b, index) => (
-        <motion.div
-          key={b.title}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={initialVariants}
-          transition={{ duration: 0.6, delay: index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
-          whileHover={{ y: -8, scale: 1.02 }}
-          className="h-full"
-        >
+      {items.map((b, index) => {
+        const isSelected = selectedCard === b.title;
+        return (
+          <motion.div
+            key={b.title}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={initialVariants}
+            transition={{ duration: 0.6, delay: index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+            whileHover={!isSelected ? { y: -8, scale: 1.02, transition: { duration: 0.3 } } : { y: -12, scale: 1.08, transition: { duration: 0.3 } }}
+            animate={isSelected ? { y: -12, scale: 1.08, transition: { duration: 0.3 } } : { y: 0, scale: 1, transition: { duration: 0.3 } }}
+            onClick={() => handleCardClick(b.title)}
+            className="h-full cursor-pointer"
+          >
           <Card className="h-full flex flex-col transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20 border-l-4 border-l-blue-600/20 hover:border-l-blue-600/60 hover:bg-gradient-to-br hover:from-blue-50/30 hover:to-indigo-50/20 glass-card">
             <CardHeader className="flex-shrink-0">
               <div className="flex items-center gap-3">
@@ -59,7 +74,8 @@ export default function Page() {
             </CardContent>
           </Card>
         </motion.div>
-      ))}
+        );
+      })}
     </div>
   );
 

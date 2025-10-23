@@ -10,9 +10,9 @@ export const Header = () => {
   const nav = [
     { href: "/", label: "Accueil" },
     { href: "/notre-methode", label: "Notre méthode" },
+    { href: "/qui-sommes-nous", label: "Qui sommes-nous" },
     { href: "/nos-expertises", label: "Nos expertises" },
     { href: "/nos-clients", label: "Nos clients" },
-    { href: "/qui-sommes-nous", label: "Qui sommes-nous" },
     { href: "/nos-partenaires", label: "Nos partenaires" },
     { href: "/contact", label: "Contact" },
     { href: "/mentions-legales", label: "Mentions légales" },
