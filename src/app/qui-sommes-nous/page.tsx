@@ -162,7 +162,7 @@ export default function Page() {
               Notre méthodologie
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-3xl leading-relaxed ml-6">
-              Chaque décision repose sur une méthodologie : rigoureuse
+            Chaque préconisation repose sur une méthodologie précise :
             </p>
           </div>
           <div className="space-y-4 max-w-3xl">
