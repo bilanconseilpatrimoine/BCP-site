@@ -24,7 +24,7 @@ const blocks = {
     { icon: Shield, title: "Protection du conjoint", desc: "Optimisation matrimoniale, clauses spécifiques, assurance-décès." },
   ],
   "prévoyance et protection": [
-    { icon: Landmark, title: "PRÉVOYANCE", desc: "Protection financière du TNS, du dirigeant d'entreprise ou du cadre d'entreprise en cas d’aléas de la vie (décès, invalidité, incapacité, dépendance) Sélection rigoureuse du partenaire assureur en fonction de la typologie du métier." },
+    { icon: Landmark, title: "PRÉVOYANCE", desc: ["Protection financière du TNS, du dirigeant d'entreprise ou du cadre d'entreprise en cas d'aléas de la vie (décès, invalidité, incapacité, dépendance)", "Sélection rigoureuse du partenaire assureur en fonction de la typologie du métier."] },
     { icon: Landmark, title: "assurance emprunteur", desc: "Amélioration des garanties en assurance emprunteur, optimisation du coût global jusqu'à 60% d'économie réalisée." },
   ],
 };
@@ -45,7 +45,7 @@ export default function Page() {
     }
   };
 
-  const renderCards = (items: { icon: any; title: string; desc: string }[]) => (
+  const renderCards = (items: { icon: any; title: string; desc: string | string[] }[]) => (
     <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
       {items.map((b, index) => {
         const isSelected = selectedCard === b.title;
@@ -70,7 +70,15 @@ export default function Page() {
               </div>
             </CardHeader>
             <CardContent className="flex-1 flex flex-col justify-start">
-              <p className="text-sm text-muted-foreground leading-relaxed">{b.desc}</p>
+              {Array.isArray(b.desc) ? (
+                <div className="text-sm text-muted-foreground leading-relaxed">
+                  {b.desc.map((line, index) => (
+                    <p key={index} className={index > 0 ? "mt-2" : ""}>{line}</p>
+                  ))}
+                </div>
+              ) : (
+                <p className="text-sm text-muted-foreground leading-relaxed">{b.desc}</p>
+              )}
             </CardContent>
           </Card>
         </motion.div>
