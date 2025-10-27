@@ -19,8 +19,8 @@ export default function Home() {
         <div className="absolute inset-0 royal-gradient opacity-90" />
         <div className="absolute inset-0" style={{ backgroundImage: "url(https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/c181b938-2390-4a02-8077-4e7f443c640e/generated_images/realistic-mountain-landscape-with-a-wind-fa2bd6f1-20251008211908.jpg)", backgroundSize: "cover", backgroundPosition: "center", mixBlendMode: "overlay", opacity: 0.35 }} />
         
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-white" style={{ paddingTop: '24rem', paddingBottom: '4rem' }}>
-          <div>
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 sm:py-32 text-white">
+          <div className="mt-18 sm:mt-22">
               <motion.span 
                 initial="hidden"
                 whileInView="show"
