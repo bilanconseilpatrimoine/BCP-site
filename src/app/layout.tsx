@@ -9,8 +9,8 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { MobileMenuProvider } from "@/components/MobileMenuProvider";
 
 export const metadata: Metadata = {
-  title: "Conseil et nous courtage",
-  description: "Cabinet de courtage en gestion de patrimoine",
+  title: "Bilan Conseil Patrimoine",
+  description: "Cabinet de Conseil en Gestion de Patrimoine",
 };
 
 export default function RootLayout({

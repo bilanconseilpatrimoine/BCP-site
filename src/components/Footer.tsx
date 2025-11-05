@@ -41,9 +41,9 @@ export default function Footer() {
             <h4 className="text-sm font-semibold mb-6 text-foreground">Navigation</h4>
             <ul className="space-y-4 text-sm">
               <li><Link href="/notre-methode" className="text-muted-foreground hover:text-foreground hover:underline transition-colors">Notre méthode</Link></li>
+              <li><Link href="/qui-sommes-nous" className="text-muted-foreground hover:text-foreground hover:underline transition-colors">Qui sommes-nous</Link></li>
               <li><Link href="/nos-expertises" className="text-muted-foreground hover:text-foreground hover:underline transition-colors">Nos expertises</Link></li>
               <li><Link href="/nos-clients" className="text-muted-foreground hover:text-foreground hover:underline transition-colors">Nos clients</Link></li>
-              <li><Link href="/qui-sommes-nous" className="text-muted-foreground hover:text-foreground hover:underline transition-colors">Qui sommes-nous</Link></li>
               <li><Link href="/nos-partenaires" className="text-muted-foreground hover:text-foreground hover:underline transition-colors">Nos partenaires</Link></li>
               <li><Link href="/contact" className="text-muted-foreground hover:text-foreground hover:underline transition-colors">Contact</Link></li>
               <li><Link href="/mentions-legales" className="text-muted-foreground hover:text-foreground hover:underline transition-colors">Mentions légales</Link></li>
