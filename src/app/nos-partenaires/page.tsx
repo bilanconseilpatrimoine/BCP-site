@@ -85,7 +85,7 @@ export default function Page() {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "url(https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=2000&auto=format&fit=crop)",
+              "url(/image/nos_partenaires.jpg)",
             backgroundSize: "cover",
             backgroundPosition: "center",
             mixBlendMode: "overlay",

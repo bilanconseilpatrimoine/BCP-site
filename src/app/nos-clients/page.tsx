@@ -64,7 +64,7 @@ export default function Page() {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "url(https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2000&auto=format&fit=crop)",
+              "/image/accompagnement_humain.png",
             backgroundSize: "cover",
             backgroundPosition: "center",
             mixBlendMode: "overlay",

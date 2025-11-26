@@ -90,7 +90,7 @@ export default function Page() {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "url(https://images.unsplash.com/photo-1516387938699-a93567ec168e?q=80&w=2000&auto=format&fit=crop)",
+              "url(/image/contact.jpg)",
             backgroundSize: "cover",
             backgroundPosition: "center",
             mixBlendMode: "overlay",

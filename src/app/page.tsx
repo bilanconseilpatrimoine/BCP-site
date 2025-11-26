@@ -17,7 +17,7 @@ export default function Home() {
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 royal-gradient opacity-90" />
-        <div className="absolute inset-0" style={{ backgroundImage: "url(https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/c181b938-2390-4a02-8077-4e7f443c640e/generated_images/realistic-mountain-landscape-with-a-wind-fa2bd6f1-20251008211908.jpg)", backgroundSize: "cover", backgroundPosition: "center", mixBlendMode: "overlay", opacity: 0.35 }} />
+        <div className="absolute inset-0" style={{ backgroundImage: "url('/image/accueil.jpg')", backgroundSize: "cover", backgroundPosition: "center", mixBlendMode: "overlay", opacity: 0.35 }} />
         
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 sm:py-32 text-white">
           <div className="mt-18 sm:mt-22">
@@ -79,17 +79,17 @@ export default function Home() {
             {
               title: "Indépendance & Transparence",
               desc: "Nous sélectionnons les meilleures solutions du marché, en toute objectivité.",
-              img: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/c181b938-2390-4a02-8077-4e7f443c640e/generated_images/professional-financial-advisor-concept-s-9d1dd6f1-20251008211916.jpg",
+              img: "/image/Independance_Transparence.png",
             },
             {
               title: "Accompagnement humain",
               desc: "Une relation de confiance, durable, avec un interlocuteur dédié.",
-              img: "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1600&auto=format&fit=crop",
+              img: "/image/accompagnement_humain.png",
             },
             {
               title: "Stratégies sur-mesure",
               desc: "Chaque situation est unique: nous concevons un plan adapté à vos objectifs.",
-              img: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1600&auto=format&fit=crop",
+              img: "/image/strategies_sur-mesure.png",
             },
           ].map((v, index) => (
             <motion.div
