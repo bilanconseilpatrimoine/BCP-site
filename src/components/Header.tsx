@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Logo from "./Logo";
 import { useMobileMenu } from "./MobileMenuProvider";
 
 export const Header = () => {
@@ -21,8 +22,12 @@ export const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/70 backdrop-blur-md supports-[backdrop-filter]:glass-card">
       <div className="mx-auto max-w-7xl px-2 sm:px-3 lg:px-4 h-32 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-3">
-          <div className="h-9 w-9 rounded-full gold-gradient shadow-sm" />
+        <Link
+          href="/"
+          aria-label="Bilan Conseil Patrimoine — Accueil"
+          className="inline-flex items-center gap-3"
+        >
+          <Logo size="md" priority />
           <div className="flex flex-col items-center">
             <span className="text-[11px] text-muted-foreground tracking-[0.2em] mb-1">CABINET</span>
             <div className="flex items-center gap-2">

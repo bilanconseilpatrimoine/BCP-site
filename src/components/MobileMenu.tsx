@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Logo from "./Logo";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -32,13 +33,24 @@ export const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
       <div className="absolute right-0 top-0 h-full w-[85%] max-w-[350px] bg-white shadow-2xl border-l border-gray-200">
         {/* Header fixe */}
         <div className="sticky top-0 bg-white border-b border-gray-200 p-4 z-10">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="h-8 w-8 rounded-full gold-gradient" />
-              <span className="font-semibold text-sm text-gray-900" style={{ fontFamily: "var(--font-heading)" }}>
-                Bilan Conseil Patrimoine
-              </span>
-            </div>
+          <div className="flex items-center justify-between gap-2">
+            <Link
+              href="/"
+              onClick={onClose}
+              aria-label="Bilan Conseil Patrimoine — Accueil"
+              className="inline-flex items-center gap-2 min-w-0"
+            >
+              <Logo size="sm" />
+              <div className="flex min-w-0 flex-col items-start leading-tight">
+                <span className="text-[10px] text-muted-foreground tracking-[0.18em]">CABINET</span>
+                <span className="text-xs font-semibold text-[#1A2B6D] sm:text-sm" style={{ fontFamily: "var(--font-heading)" }}>
+                  BILAN CONSEIL
+                </span>
+                <span className="text-xs font-semibold text-[#1A2B6D] sm:text-sm" style={{ fontFamily: "var(--font-heading)" }}>
+                  PATRIMOINE
+                </span>
+              </div>
+            </Link>
             <button 
               aria-label="Fermer le menu" 
               onClick={onClose} 

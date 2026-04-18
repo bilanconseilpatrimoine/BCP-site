@@ -174,6 +174,75 @@
     background-size: 200% 100%;
     animation: shimmerGold 2.2s linear infinite;
   }
+
+  /* Brand logo frame — premium gold ring + royal glow */
+  .logo-frame {
+    position: relative;
+    display: inline-flex;
+    border-radius: 1rem;
+    padding: 2px;
+    background-image: linear-gradient(
+      135deg,
+      color-mix(in oklab, var(--gold) 85%, white 15%) 0%,
+      color-mix(in oklab, var(--gold) 55%, black 45%) 50%,
+      color-mix(in oklab, var(--gold) 90%, white 10%) 100%
+    );
+    box-shadow:
+      0 10px 30px color-mix(in oklab, var(--royal) 30%, transparent),
+      0 0 0 1px color-mix(in oklab, var(--gold) 40%, transparent);
+    transition: transform 0.35s ease, box-shadow 0.35s ease, filter 0.35s ease;
+  }
+  .logo-frame::after {
+    content: "";
+    position: absolute;
+    inset: -6px;
+    border-radius: 1.25rem;
+    background: radial-gradient(
+      closest-side,
+      color-mix(in oklab, var(--gold) 45%, transparent) 0%,
+      transparent 70%
+    );
+    opacity: 0.35;
+    filter: blur(6px);
+    z-index: -1;
+    animation: logoHalo 4.5s ease-in-out infinite;
+  }
+  .logo-frame:hover {
+    transform: translateY(-1px) scale(1.03);
+    box-shadow:
+      0 14px 40px color-mix(in oklab, var(--royal) 40%, transparent),
+      0 0 0 1px color-mix(in oklab, var(--gold) 75%, transparent);
+    filter: saturate(1.05);
+  }
+  .logo-frame:hover::after {
+    opacity: 0.6;
+  }
+  .logo-frame > img {
+    border-radius: calc(1rem - 2px);
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  /* Petits logos circulaires (header, footer, menu mobile) */
+  .logo-frame--circle {
+    border-radius: 9999px;
+    overflow: hidden;
+  }
+  .logo-frame--circle::after {
+    border-radius: 9999px;
+  }
+  .logo-frame--circle > img {
+    border-radius: 50%;
+  }
+  @keyframes logoHalo {
+    0%, 100% { opacity: 0.28; transform: scale(1); }
+    50%      { opacity: 0.5;  transform: scale(1.05); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .logo-frame::after { animation: none; }
+    .logo-frame { transition: none; }
+  }
 }
 
 /* Hide Next.js error overlay portal */

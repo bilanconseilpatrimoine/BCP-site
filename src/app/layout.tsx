@@ -5,6 +5,7 @@ import ErrorReporter from "@/components/ErrorReporter";
 import Script from "next/script";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { MobileMenuProvider } from "@/components/MobileMenuProvider";
 
@@ -40,6 +41,7 @@ export default function RootLayout({
           {children}
           <Footer />
           {process.env.NODE_ENV === 'development' && <VisualEditsMessenger />}
+          <Analytics />
           <SpeedInsights />
         </MobileMenuProvider>
       </body>
