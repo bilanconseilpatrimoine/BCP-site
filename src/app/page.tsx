@@ -17,7 +17,14 @@ export default function Home() {
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 royal-gradient opacity-90" />
-        <div className="absolute inset-0" style={{ backgroundImage: "url('/image/accueil.jpg')", backgroundSize: "cover", backgroundPosition: "center", mixBlendMode: "overlay", opacity: 0.35 }} />
+        <div
+          className="absolute inset-0 bg-no-repeat"
+          style={{
+            backgroundImage: "url('/image/desk.png')",
+            backgroundSize: "100% auto",
+            backgroundPosition: "center",
+          }}
+        />
         
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 sm:py-32 text-white">
           <div className="mt-18 sm:mt-22">

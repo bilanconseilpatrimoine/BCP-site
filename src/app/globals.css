@@ -172,6 +172,10 @@
       color-mix(in oklab, var(--gold) 90%, white 10%) 20%,
       color-mix(in oklab, var(--gold) 75%, black 25%) 40%);
     background-size: 200% 100%;
+    background-position: 0 0;
+  }
+  .shimmer-gold:hover,
+  .shimmer-gold:focus-visible {
     animation: shimmerGold 2.2s linear infinite;
   }
 
