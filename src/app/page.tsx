@@ -122,7 +122,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Callout */}
+      {/* Callout RDV — photo en fond, texte + CTA en superposition */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-20">
         <motion.div 
           initial="hidden"
@@ -130,14 +130,26 @@ export default function Home() {
           viewport={{ once: true, amount: 0.3 }}
           variants={initialVariants}
           transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="rounded-2xl border p-8 md:p-10 glass-card"
+          className="relative overflow-hidden rounded-2xl border min-h-[20rem] md:min-h-[22rem]"
         >
-          <div className="md:flex items-center justify-between gap-8">
+          <Image
+            src="/image/accueil.jpg"
+            alt="Progression patrimoniale vers vos objectifs de vie"
+            fill
+            className="object-cover object-center"
+            sizes="(max-width: 1280px) 100vw, 1152px"
+          />
+          {/* Voile : lisibilité du texte à gauche / haut, photo visible à droite */}
+          <div
+            className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-b from-background from-0% via-background/88 via-[52%] to-background/25 md:bg-gradient-to-r md:from-background md:from-0% md:via-background/82 md:via-[46%] md:to-transparent"
+            aria-hidden
+          />
+          <div className="relative z-10 flex min-h-[20rem] flex-col justify-between gap-8 p-8 md:min-h-[22rem] md:flex-row md:items-center md:justify-between md:gap-10 md:p-10">
             <div className="max-w-2xl">
               <h2 className="text-2xl md:text-3xl font-semibold" style={{ fontFamily: "var(--font-heading)" }}>Un premier échange confidentiel et sans engagement</h2>
               <p className="mt-3 text-muted-foreground">Faisons connaissance et esquissons les premiers axes d'optimisation: bilan patrimonial, objectifs de vie, horizon d'investissement et tolérance au risque.</p>
             </div>
-            <Button className="mt-6 md:mt-0 gold-gradient shimmer-gold text-black font-semibold shadow-none hover:scale-105 hover:shadow-lg hover:shadow-[#D4AF37]/25 active:scale-95 transition-all duration-200" asChild>
+            <Button className="w-fit shrink-0 gold-gradient shimmer-gold text-black font-semibold shadow-none hover:scale-105 hover:shadow-lg hover:shadow-[#D4AF37]/25 active:scale-95 transition-all duration-200" asChild>
               <Link href="/contact">Je prends rendez-vous</Link>
             </Button>
           </div>
