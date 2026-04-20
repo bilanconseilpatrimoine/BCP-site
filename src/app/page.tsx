@@ -18,16 +18,14 @@ export default function Home() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 royal-gradient opacity-90" />
         <div
-          className="absolute inset-0 bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-top bg-no-repeat md:bg-center md:bg-[length:120%_auto] lg:bg-[length:100%_auto]"
           style={{
             backgroundImage: "url('/image/desk.png')",
-            backgroundSize: "100% auto",
-            backgroundPosition: "center",
           }}
         />
         
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 sm:py-32 text-white">
-          <div className="mt-18 sm:mt-22">
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-32 text-white">
+          <div className="mt-8 sm:mt-22">
               <motion.span 
                 initial="hidden"
                 whileInView="show"
