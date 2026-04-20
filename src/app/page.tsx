@@ -24,57 +24,71 @@ export default function Home() {
           }}
         />
         
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-32 text-white">
-          <div className="mt-8 sm:mt-22">
-              <motion.span 
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-32 text-white xl:max-w-[90rem]">
+          <div className="mt-8 grid gap-8 sm:mt-16 xl:grid-cols-[minmax(0,1.12fr)_minmax(0,0.88fr)] xl:items-end">
+            <div>
+              <motion.span
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true, margin: "-10%" }}
                 variants={initialVariants}
                 transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-                className="inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold bg-white/10 ring-1 ring-white/20"
+                className="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-xs font-semibold ring-1 ring-white/20"
               >
-              Excellence • Confiance • Sur-mesure
-            </motion.span>
-            <motion.h1 
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, margin: "-10%" }}
-              variants={initialVariants}
-              transition={{ duration: 0.6, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
-              className="mt-6 text-4xl sm:text-5xl md:text-6xl font-semibold leading-tight" 
-              style={{ fontFamily: "var(--font-heading)" }}
-            >
-              Construisons, protégeons et transmettons votre patrimoine
-            </motion.h1>
-            <motion.p 
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, margin: "-10%" }}
-              variants={initialVariants}
-              transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-              className="mt-6 max-w-2xl text-white/90"
-            >
-              Révélez tout le potentiel de votre patrimoine grâce à un accompagnement humain, indépendant et sur-mesure. <br />
-              Stratégie globale, investissements, fiscalité et transmission : depuis plus de 15 ans, nos experts certifiés en Gestion de Patrimoine vous aident à bâtir l’avenir que vous méritez.
-            </motion.p>
-            <motion.div 
+                Excellence • Confiance • Sur-mesure
+              </motion.span>
+              <motion.h1
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, margin: "-10%" }}
+                variants={initialVariants}
+                transition={{ duration: 0.6, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+                className="mt-6 max-w-none text-4xl font-semibold leading-[1.08] sm:text-5xl md:text-[3.25rem] lg:text-[3.45rem] xl:text-6xl"
+                style={{ fontFamily: "var(--font-heading)" }}
+              >
+                Construisons, protégeons et transmettons votre patrimoine
+              </motion.h1>
+              <motion.div
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, margin: "-10%" }}
+                variants={initialVariants}
+                transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+                className="mt-8 flex flex-wrap gap-4"
+              >
+                <Button className="gold-gradient shimmer-gold text-black font-semibold shadow-none transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-[#D4AF37]/25 active:scale-95" asChild>
+                  <Link href="/contact">Prendre rendez-vous</Link>
+                </Button>
+              </motion.div>
+            </div>
+
+            <motion.div
               initial="hidden"
               whileInView="show"
               viewport={{ once: true, margin: "-10%" }}
               variants={initialVariants}
               transition={{ duration: 0.6, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
-              className="mt-8 flex flex-wrap gap-4"
+              className="rounded-2xl border border-white/20 bg-white/10 p-4 shadow-xl shadow-black/20 backdrop-blur-md sm:p-6 lg:max-w-3xl xl:ml-auto xl:w-[36rem] xl:max-w-none 2xl:w-[40rem] 2xl:translate-x-6"
             >
-              <Button className="gold-gradient shimmer-gold text-black font-semibold shadow-none hover:scale-105 hover:shadow-lg hover:shadow-[#D4AF37]/25 active:scale-95 transition-all duration-200" asChild>
-                <Link href="/contact">Prendre rendez-vous</Link>
-              </Button>
-              {/* <Button variant="outline" className="border-white/30 text-white hover:bg-white/10" asChild>
-                <Link href="/notre-methode">Découvrir notre méthode</Link>
-              </Button> */}
+              <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
+                <div className="relative h-32 w-full overflow-hidden rounded-xl ring-1 ring-white/25 sm:h-28 sm:w-44 sm:shrink-0">
+                  <Image
+                    src="/image/pen.png"
+                    alt="Stylo et carnet, symbole d'un accompagnement patrimonial sur-mesure"
+                    fill
+                    className="object-cover object-center"
+                    sizes="(max-width: 640px) 100vw, 176px"
+                  />
+                </div>
+                <p className="text-sm leading-relaxed text-white/95 sm:text-base">
+                  Révélez tout le potentiel de votre patrimoine grâce à un accompagnement humain, indépendant et sur-mesure.
+                  Stratégie globale, investissements, fiscalité et transmission : depuis plus de 15 ans, nos experts certifiés
+                  en Gestion de Patrimoine vous aident à bâtir l'avenir que vous méritez.
+                </p>
+              </div>
             </motion.div>
-            </div>
           </div>
+        </div>
         </section>
 
       {/* Valeurs */}
