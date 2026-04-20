@@ -18,7 +18,7 @@ export default function Home() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 royal-gradient opacity-90" />
         <div
-          className="absolute inset-0 bg-cover bg-top bg-no-repeat md:bg-center md:bg-[length:120%_auto] lg:bg-[length:100%_auto]"
+          className="absolute inset-0 bg-cover bg-no-repeat bg-[position:50%_72%]"
           style={{
             backgroundImage: "url('/image/desk.png')",
           }}
