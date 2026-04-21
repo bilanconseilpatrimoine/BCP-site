@@ -42,7 +42,6 @@ export const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
             >
               <Logo size="sm" />
               <div className="flex min-w-0 flex-col items-start leading-tight">
-                <span className="text-[10px] text-muted-foreground tracking-[0.18em]">CABINET</span>
                 <span className="text-xs font-semibold text-[#1A2B6D] sm:text-sm" style={{ fontFamily: "var(--font-heading)" }}>
                   BILAN CONSEIL
                 </span>

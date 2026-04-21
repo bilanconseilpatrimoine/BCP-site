@@ -29,7 +29,6 @@ export const Header = () => {
         >
           <Logo size="md" priority />
           <div className="flex flex-col items-center">
-            <span className="text-[11px] text-muted-foreground tracking-[0.2em] mb-1">CABINET</span>
             <div className="flex items-center gap-2">
               <span className="text-lg font-semibold text-[#1A2B6D]" style={{ fontFamily: "var(--font-heading)" }}>BILAN</span>
               <span className="text-lg font-semibold text-[#1A2B6D]" style={{ fontFamily: "var(--font-heading)" }}>CONSEIL</span>
