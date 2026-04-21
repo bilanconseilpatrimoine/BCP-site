@@ -41,7 +41,7 @@ export default function Home() {
                 viewport={{ once: true, margin: "-10%" }}
                 variants={initialVariants}
                 transition={{ duration: 0.6, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
-                className="mt-6 max-w-2xl text-4xl font-semibold uppercase leading-[1.18] tracking-[0.02em] sm:text-5xl md:text-[3.25rem] lg:text-[3.45rem] xl:text-[4rem]"
+                className="mt-6 xl:mt-8 2xl:mt-10 max-w-2xl text-4xl font-semibold uppercase leading-[1.18] tracking-[0.02em] sm:text-5xl md:text-[3.25rem] lg:text-[3.45rem] xl:text-[41px]"
                 style={{ fontFamily: "var(--font-heading)" }}
               >
                 Construisons, protégeons et transmettons votre patrimoine
@@ -54,7 +54,7 @@ export default function Home() {
               viewport={{ once: true, margin: "-10%" }}
               variants={initialVariants}
               transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-              className="mt-8 max-w-2xl rounded-2xl border border-white/20 bg-white/10 p-4 shadow-2xl shadow-black/35 backdrop-blur-md sm:p-6"
+              className="mt-8 xl:mt-10 2xl:mt-12 max-w-2xl rounded-2xl border border-white/20 bg-white/10 p-4 shadow-2xl shadow-black/35 backdrop-blur-md sm:p-6"
             >
               <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
                 <div className="relative h-32 w-full overflow-hidden rounded-xl ring-1 ring-white/25 sm:h-28 sm:w-44 sm:shrink-0">
@@ -79,7 +79,7 @@ export default function Home() {
               viewport={{ once: true, margin: "-10%" }}
               variants={initialVariants}
               transition={{ duration: 0.6, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
-              className="mt-6"
+              className="mt-6 xl:mt-8 2xl:mt-10"
             >
               <Button
                 className="h-12 rounded-xl px-7 text-base gold-gradient shimmer-gold text-black font-semibold shadow-none transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-[#D4AF37]/25 active:scale-95"
