@@ -16,16 +16,14 @@ export default function Home() {
     <main className="min-h-[calc(100vh-64px-64px)]">
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 royal-gradient opacity-90" />
         <div
-          className="absolute inset-0 bg-cover bg-no-repeat bg-[position:50%_72%]"
+          className="absolute inset-0 bg-cover bg-no-repeat bg-[position:55%_62%]"
           style={{
-            backgroundImage: "url('/image/desk.png')",
+            backgroundImage: "url('/image/desk1.png')",
           }}
         />
-        
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-32 text-white xl:max-w-[90rem]">
-          <div className="mt-8 grid gap-8 sm:mt-16 xl:grid-cols-[minmax(0,1.12fr)_minmax(0,0.88fr)] xl:items-end">
+        <div className="relative mx-auto flex min-h-[calc(100vh-64px-64px)] max-w-7xl items-center px-4 py-16 text-white sm:px-6 sm:py-20 lg:px-8 xl:max-w-[90rem] xl:py-24">
+          <div className="max-w-3xl">
             <div>
               <motion.span
                 initial="hidden"
@@ -33,7 +31,7 @@ export default function Home() {
                 viewport={{ once: true, margin: "-10%" }}
                 variants={initialVariants}
                 transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-                className="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-xs font-semibold ring-1 ring-white/20"
+                className="inline-flex items-center rounded-full bg-white/8 px-3 py-1 text-[11px] font-semibold tracking-[0.04em] ring-1 ring-white/20"
               >
                 Excellence • Confiance • Sur-mesure
               </motion.span>
@@ -43,23 +41,11 @@ export default function Home() {
                 viewport={{ once: true, margin: "-10%" }}
                 variants={initialVariants}
                 transition={{ duration: 0.6, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
-                className="mt-6 max-w-none text-4xl font-semibold leading-[1.08] sm:text-5xl md:text-[3.25rem] lg:text-[3.45rem] xl:text-6xl"
+                className="mt-6 max-w-2xl text-4xl font-semibold uppercase leading-[1.18] tracking-[0.02em] sm:text-5xl md:text-[3.25rem] lg:text-[3.45rem] xl:text-[4rem]"
                 style={{ fontFamily: "var(--font-heading)" }}
               >
                 Construisons, protégeons et transmettons votre patrimoine
               </motion.h1>
-              <motion.div
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true, margin: "-10%" }}
-                variants={initialVariants}
-                transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-                className="mt-8 flex flex-wrap gap-4"
-              >
-                <Button className="gold-gradient shimmer-gold text-black font-semibold shadow-none transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-[#D4AF37]/25 active:scale-95" asChild>
-                  <Link href="/contact">Prendre rendez-vous</Link>
-                </Button>
-              </motion.div>
             </div>
 
             <motion.div
@@ -67,8 +53,8 @@ export default function Home() {
               whileInView="show"
               viewport={{ once: true, margin: "-10%" }}
               variants={initialVariants}
-              transition={{ duration: 0.6, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
-              className="rounded-2xl border border-white/20 bg-white/10 p-4 shadow-xl shadow-black/20 backdrop-blur-md sm:p-6 lg:max-w-3xl xl:ml-auto xl:w-[36rem] xl:max-w-none 2xl:w-[40rem] 2xl:translate-x-6"
+              transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+              className="mt-8 max-w-2xl rounded-2xl border border-white/20 bg-white/10 p-4 shadow-2xl shadow-black/35 backdrop-blur-md sm:p-6"
             >
               <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
                 <div className="relative h-32 w-full overflow-hidden rounded-xl ring-1 ring-white/25 sm:h-28 sm:w-44 sm:shrink-0">
@@ -80,16 +66,31 @@ export default function Home() {
                     sizes="(max-width: 640px) 100vw, 176px"
                   />
                 </div>
-                <p className="text-sm leading-relaxed text-white/95 sm:text-base">
+                <p className="text-sm leading-relaxed text-white/95 sm:text-[1.02rem]">
                   Révélez tout le potentiel de votre patrimoine grâce à un accompagnement humain, indépendant et sur-mesure.
                   Stratégie globale, investissements, fiscalité et transmission : depuis plus de 15 ans, nos experts certifiés
                   en Gestion de Patrimoine vous aident à bâtir l'avenir que vous méritez.
                 </p>
               </div>
             </motion.div>
+            <motion.div
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, margin: "-10%" }}
+              variants={initialVariants}
+              transition={{ duration: 0.6, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
+              className="mt-6"
+            >
+              <Button
+                className="h-12 rounded-xl px-7 text-base gold-gradient shimmer-gold text-black font-semibold shadow-none transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-[#D4AF37]/25 active:scale-95"
+                asChild
+              >
+                <Link href="/contact">Prendre rendez-vous</Link>
+              </Button>
+            </motion.div>
           </div>
         </div>
-        </section>
+      </section>
 
       {/* Valeurs */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
