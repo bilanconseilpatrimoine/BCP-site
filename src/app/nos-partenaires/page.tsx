@@ -11,6 +11,11 @@ const partners = [
     alt: "Logo Abeille Assurance"
   },
   {
+    name: "Amundi EE",
+    logo: "/logos/amundi_ee.png",
+    alt: "Logo Amundi EE"
+  },
+  {
     name: "April",
     logo: "/logos/april.png",
     alt: "Logo April"
@@ -26,6 +31,16 @@ const partners = [
     alt: "Logo swisslife"
   },
   {
+    name: "Eres",
+    logo: "/logos/eres.png",
+    alt: "Logo Eres"
+  },
+  {
+    name: "Garance",
+    logo: "/logos/garance.png",
+    alt: "Logo Garance"
+  },
+  {
     name: "Generali",
     logo: "/logos/generali.png",
     alt: "Logo Generali"
@@ -39,6 +54,11 @@ const partners = [
     name: "MetLife",
     logo: "/logos/metlife.png",
     alt: "Logo MetLife"
+  },
+  {
+    name: "Natixis Interépargne",
+    logo: "/logos/natixis_interepargne.png",
+    alt: "Logo Natixis Interépargne"
   },
   {
     name: "Nortia",
