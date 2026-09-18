@@ -12,7 +12,7 @@ const partners = [
   },
   {
     name: "Amundi EE",
-    logo: "/logos/amundi_ee.png",
+    logo: "/logos/Amundi.png",
     alt: "Logo Amundi EE"
   },
   {
@@ -33,12 +33,14 @@ const partners = [
   {
     name: "Eres",
     logo: "/logos/eres.png",
-    alt: "Logo Eres"
+    alt: "Logo Eres",
+    scale: 0.65
   },
   {
     name: "Garance",
     logo: "/logos/garance.png",
-    alt: "Logo Garance"
+    alt: "Logo Garance",
+    scale: 0.65
   },
   {
     name: "Generali",
@@ -156,7 +158,10 @@ export default function Page() {
                     width={200}
                     height={128}
                     className="object-contain w-full h-full p-4"
-                    style={{ filter: 'brightness(0.9) contrast(1.1)' }}
+                    style={{
+                      filter: 'brightness(0.9) contrast(1.1)',
+                      transform: p.scale ? `scale(${p.scale})` : undefined,
+                    }}
                   />
                 </CardContent>
               </Card>
