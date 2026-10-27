@@ -51,7 +51,7 @@ export default function MentionsLegalesPage() {
             Bilan Conseil Patrimoine — 229 rue saint honoré, 75001 Paris France — cours des bastions 13, 1205 Genève Suisse —
             Email: contact@bilanconseilpatrimoine.com
           </p>
-          <p>Directeur de la publication: Mme Aknin Noémie.</p>
+          <p>Directeur de la publication: Mr. Johan Atlan</p>
         </motion.article>
 
         <motion.article 
