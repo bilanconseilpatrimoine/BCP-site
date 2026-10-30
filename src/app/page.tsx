@@ -44,7 +44,7 @@ export default function Home() {
                 className="mt-6 xl:mt-8 2xl:mt-10 max-w-2xl text-4xl font-semibold uppercase leading-[1.18] tracking-[0.02em] sm:text-5xl md:text-[3.25rem] lg:text-[3.45rem] xl:text-[41px]"
                 style={{ fontFamily: "var(--font-heading)" }}
               >
-                Construisons, protégeons et transmettons votre patrimoine
+                Votre patrimoine, à la mesure de vos ambitions.
               </motion.h1>
             </div>
 

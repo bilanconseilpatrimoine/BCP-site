@@ -64,8 +64,7 @@ export default function MentionsLegalesPage() {
         >
           <h2 className="text-2xl font-semibold" style={{ fontFamily: "var(--font-heading)" }}>Statuts & enregistrements</h2>
           <ul className="list-disc pl-6">
-            <li>ORIAS n° 24005582</li>
-            <li>COA Courtier d'assurance</li>
+            <li>COA ORIAS N°24005582</li>
           </ul>
         </motion.article>
 
@@ -84,7 +83,7 @@ export default function MentionsLegalesPage() {
             d'accès, de rectification, d'opposition, d'effacement, de limitation et de portabilité de vos données.
           </p>
           <p>
-            Pour exercer ces droits: contact@bilanconseilpatrimoine.com Vos données sont conservées pour la durée
+            Pour exercer ces droits: contact@bilanconseilpatrimoine.com.<br />Vos données sont conservées pour la durée
             strictement nécessaire aux finalités poursuivies.
           </p>
         </motion.article>
